@@ -15,6 +15,7 @@ class CreateTransportsTable extends Migration
     {
         Schema::create('transports', function (Blueprint $table) {
             $table->id();
+            $table->integer('driver_id');
             $table->string('transport_type', 100);
             $table->string('transport_number', 100);
             $table->string('image')->nullable();

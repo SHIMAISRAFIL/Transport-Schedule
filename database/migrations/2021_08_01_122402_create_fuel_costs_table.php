@@ -15,6 +15,13 @@ class CreateFuelCostsTable extends Migration
     {
         Schema::create('fuel_costs', function (Blueprint $table) {
             $table->id();
+            $table->string('transportid', 100);
+            $table->string('fueltype', 100);
+            $table->string('fuelprice', 100);
+            $table->string('fuelquantity', 100);
+            $table->string('date', 100);
+            $table->string('place', 100);
+            $table->string('remarks', 100)->nullable();
             $table->timestamps();
         });
     }

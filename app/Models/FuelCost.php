@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class FuelCost extends Model
 {
     use HasFactory;
+    protected $guarded=[];
 }

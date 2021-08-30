@@ -43,5 +43,5 @@
         @endforeach
         </tbody>
 </table> 
-{{$products->links('pagination::bootstrap-4')}}
+<!-- {{$products->links('pagination::bootstrap-4')}} -->
 @endsection

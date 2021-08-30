@@ -33,7 +33,7 @@
       
 
       <td>
-            <a href="{{route('category.product',$category->id)}}" class="btn btn-primary">view</a>
+            <a href="{{route('category.product', $category->id)}}" class="btn btn-primary">View</a>
         </td>
 
     </tr>

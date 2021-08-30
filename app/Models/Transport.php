@@ -9,4 +9,10 @@ class Transport extends Model
 {
     use HasFactory;
     protected $guarded=[];
+   
+    public function driver()
+    {
+
+    return $this->belongsto(Driver::class);
+    }
 }

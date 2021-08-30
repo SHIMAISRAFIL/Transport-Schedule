@@ -15,6 +15,7 @@
 <thead>
     <tr>
       <th scope="col">ID</th>
+      <th scope="col">Driver Name</th>
       <th scope="col">Transport Type</th>
       <th scope="col">Transport No.</th>
       <th scope="col">Action</th>
@@ -25,10 +26,11 @@
   @foreach($transports as $transport)
     <tr>
       <th scope="row">{{$transport->id}}</th>
+      <td>{{$transport->driver->name}}</td>
       <td>{{$transport->transport_type}}</td>
       <td>{{$transport->transport_number}}</td>
       
-      <td><a href="" class="btn btn-primary">view</a></td>
+      <td><a href="" class="btn btn-primary">View</a></td>
     </tr>
     @endforeach
 </tbody>

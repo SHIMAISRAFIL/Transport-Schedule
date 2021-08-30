@@ -8,6 +8,18 @@
 
 <form action="{{route('transport.store')}}" method="post">
   @csrf
+  <div class="form-group">
+          <label for="name">Select Driver </label>
+         <select name="driver_id" class="form-control" id="" ></div>
+
+
+ @foreach($drivers as $driver)
+
+  <option value="{{$driver->id}}">{{$driver->name}} </option>
+ 
+@endforeach
+</select>
+</div>
 <div class="form-group">
 
     <label for="transport_type">Transport Type</label>
@@ -18,7 +30,7 @@
 
     <label for="transport_number">Transport No.</label>
 
-    <input name="transport_number" type="number" class="form-control" id="transport_number"  placeholder="Enter Transport No."></div>
+    <input name="transport_number" type="text" class="form-control" id="transport_number"  placeholder="Enter Transport No."></div>
 
   
   <button type="submit" class="btn btn-primary">Submit</button>

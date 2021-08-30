@@ -15,7 +15,7 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Driver Name</th>
-      <th scope="col">Transport no.</th>
+      
       <th scope="col">Age</th>
       <th scope="col">License no.</th>
       <th scope="col">Action</th>
@@ -26,15 +26,17 @@
   @foreach($drivers as $driver)
     <tr>
       <th scope="row">{{$driver->id}}</th>
-      <td>{{ $driver->transport->number }}</td>
+      
       <td>{{$driver->name}}</td>
+     
+     
       <td>{{$driver->age}}</td>
       <td>{{$driver->license}}</td>
-      <td><a href="" class="btn btn-primary">view</a></td>
+      <td><a href="{{route('driver.transport', $driver->id)}}" class="btn btn-primary">View</a></td>
     </tr>
     @endforeach
 </tbody>
 </table>
-{{$drivers->links('pagination::bootstrap-4')}}
+
 @endsection
 

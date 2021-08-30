@@ -15,12 +15,12 @@ class CreateRegularTripsTable extends Migration
     {
         Schema::create('regular_trips', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100);
-            $table->string('email', 100);
-            $table->string('password', 20);
-            $table->string('mobile', 20);
-            $table->string('address', 50);
-            $table->string('image');
+            $table->string('date', 100);
+            $table->string('time', 100);
+            $table->string('location', 20);
+            $table->string('driver_name', 20);
+            $table->string('transport_number', 50);
+          
             $table->timestamps();
         });
     }
