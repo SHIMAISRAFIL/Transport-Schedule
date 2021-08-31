@@ -44,7 +44,7 @@
               </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{route('officeemployee.info')}}">
+            <a class="nav-link" href="{{route('officeemployee.list')}}">
               <span data-feather="users"></span>
               OfficeEmployees
                </a>

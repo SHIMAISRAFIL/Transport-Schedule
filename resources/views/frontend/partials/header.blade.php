@@ -13,7 +13,7 @@
 									<li><a href="{{route('contact')}}">Contacts</a></li>
 									<li><a href="">Login</a></li>
 									<li><a href="{{route('user.signup')}}">Signup</a></li>
-                                    <li><a href="">Terms & Conditions</a></li>
+                                    <li><a href="">Terms & Privacy</a></li>
 
 								</ul>
 							</nav>

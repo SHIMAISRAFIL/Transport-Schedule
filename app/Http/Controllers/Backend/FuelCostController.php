@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\FuelCost;
+use App\Models\Transport;
 
 class FuelCostController extends Controller
 {
@@ -18,7 +19,9 @@ class FuelCostController extends Controller
     public function create()
 
     {
-        return view('backend.layouts.fuelcost.create');
+        $transportids=Transport::all();
+        // dd($transportids);
+        return view('backend.layouts.fuelcost.create',compact('transportids'));
     }
     public function store(Request $request)
     { 
@@ -37,7 +40,7 @@ class FuelCostController extends Controller
  
          ]);
  
-         return redirect()->back();
+         return redirect()->route('fuelcost.list');
                  
     }
 

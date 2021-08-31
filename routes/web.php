@@ -4,18 +4,19 @@ use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\BackendUserController;
 use App\Http\Controllers\Backend\OfficeEmployeeController;
 use App\Http\Controllers\Backend\DriverController;
 use App\Http\Controllers\Backend\LocationController;
 use App\Http\Controllers\Backend\RegularTripController;
 use App\Http\Controllers\Backend\ScheduleController;
 use App\Http\Controllers\Backend\TransportController;
-use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Backend\FuelCostController;
 
 
 use App\Http\Controllers\Frontend\FrontHomeController;
-
+use Database\Seeders\UsersTableSeeder;
 use Illuminate\Support\Facades\Route;
 
 
@@ -31,7 +32,9 @@ Route::post('/signup/store', [UserController::class, 'signupstore'])->name('user
 
 
 //admin panel routes
-Route::group(['prefix'=>'admin'],function(){
+Route::get('admin/login', [BackendUserController::class, 'login'])->name('admin.login');
+
+Route::group(['prefix'=>'admin', 'middleware'=>'auth'],function(){
    
 
     Route::get ('/', function () {
@@ -47,23 +50,16 @@ Route::group(['prefix'=>'admin'],function(){
     
     
     
-    Route::get('/terms', function()
-    {
-        return view('backend.layouts.terms');
-    });
-    Route::get('/', [HomeController::class, 'home']);
-    
-    Route::get('/home', [HomeController::class, 'home']);
-    
-    Route::get('/contact', [HomeController::class, 'contact']);
+   
+ 
     
 
 
     //user
 
-    Route::get('/all-users', [UserController::class, 'list'])->name('user.list');
-    Route::get('/users/create', [UserController::class, 'create'])->name('user.create');
-    Route::get('/users/store', [UserController::class, 'store'])->name('user.store');
+    Route::get('/officeemployees', [BackendUserController::class, 'officeemployeelist'])->name('officeemployee.list');
+    Route::get('/users', [BackendUserController::class, 'userlist'])->name('user.list');
+    Route::get('/users/store', [BackendUserController::class, 'store'])->name('user.store');
     
 
 
@@ -90,11 +86,11 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('/admins', [AdminController::class, 'add'])->name('admin.add');
     Route::post('/admins/store', [AdminController::class, 'store'])->name('admin.store');
     
-    //office employee
+    // office employee
     
-    Route::get('/all-office-employees/info', [OfficeEmployeeController::class, 'info'])->name('officeemployee.info');
-    Route::get('/all-office-employees', [OfficeEmployeeController::class, 'add'])->name('officeemployee.add');
-    Route::post('/all-office-employees/store', [OfficeEmployeeController::class, 'store'])->name('officeemployee.store');
+    // Route::get('/all-office-employees/info', [OfficeEmployeeController::class, 'info'])->name('officeemployee.info');
+    // Route::get('/all-office-employees', [OfficeEmployeeController::class, 'add'])->name('officeemployee.add');
+    // Route::post('/all-office-employees/store', [OfficeEmployeeController::class, 'store'])->name('officeemployee.store');
     //drivers
     
     Route::get('/all-drivers/info', [DriverController::class, 'info'])->name('driver.info');
@@ -129,6 +125,10 @@ Route::group(['prefix'=>'admin'],function(){
     
     Route::get('/fuelcosts/create', [FuelCostController::class, 'create'])->name('fuelcost.create');
     Route::post('/fuelcosts/store', [FuelCostController::class, 'store'])->name('fuelcost.store');
+
+
+   
+
 });
 
 

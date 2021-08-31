@@ -21,8 +21,8 @@
   @foreach($transports as $key=>$data)
             <tr>
                 <th scope="row">{{$key+1}}</th>
-                <td>{{$data->number}}</td>
-                <td>{{$data->type}}</td>
+                <td>{{$data->transport_number}}</td>
+                <td>{{$data->transport_type}}</td>
 
             </tr>
         @endforeach

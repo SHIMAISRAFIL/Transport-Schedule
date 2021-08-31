@@ -43,7 +43,7 @@ class DriverController extends Controller
  
          ]);
  
-         return redirect()->back();
+         return redirect()->route('driver.info');
                  
     }
 
