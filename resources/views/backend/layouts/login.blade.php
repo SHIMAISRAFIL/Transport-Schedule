@@ -1,10 +1,8 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<!--author:starttemplate-->
-<!--reference site : starttemplate.com-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +13,7 @@
     <meta name="author" content="leamug">
     <title> Login Form </title>
     <link href="css/style.css" rel="stylesheet" id="style">
-    <!-- Bootstrap core Library -->
+    
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -25,6 +23,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+    
 <style type="text/css">body {
   background-image:url('https://i.redd.it/o8dlfk93azs31.jpg');
   background-position:center;
@@ -84,29 +83,46 @@ h4 {
 }</style>
 
 <!-- Page Content -->
+
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-offset-5 col-md-4 text-center">
+
             <h1 class='text-white'> Login Form</h1>
+            @if(session()->has('message'))
+                <span class="alert alert-danger">{{session()->get('message')}}</span>
+            @endif
+            
+<form action="{{route('admin.login.store')}}" method="post">
+@csrf
               <div class="form-login"></br>
                 <h4>Secure Login</h4>
                 </br>
+
                 <input type="email" name="email" id="email" class="form-control input-sm chat-input" placeholder="email"/>
                 </br></br>
                 <input type="password" name="password" id="password" class="form-control input-sm chat-input" placeholder="password"/>
                 </br></br>
+                <div class="row align-items-center remember">
+                        <input type="checkbox">Remember Me
+                    </div>
                 <div class="wrapper">
                         <span class="group-btn">
-                            <a href="#" class="btn btn-danger btn-md">login <i class="fa fa-sign-in"></i></a>
+                            <input type="submit" value="Login" class="btn btn-danger btn-md"> <i class="fa fa-sign-in"></i></a>
                         </span>
                 </div>
+</form>
+                
             </div>
+        </form>
         </div>
     </div>
     </br></br></br>
     <!--footer-->
     <div class="footer text-white text-center">
-        <p><a href="https://freecss.tech">Free Css</a></p>
+     
     </div>
     <!--//footer-->
 </div>

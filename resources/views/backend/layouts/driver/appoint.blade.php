@@ -12,17 +12,14 @@
     <label for="name">Name</label>
 
     <input name="name" type="text" class="form-control" id="name"  placeholder="Enter Name"></div>
+    
     <div class="form-group">
-
-    <label for="age">Age</label>
-
-    <input name="age" type="number" class="form-control" id="age"  placeholder="Enter age"></div>
-
-  <div class="form-group">
 
     <label for="email">Email address</label>
 
     <input name="email" type="email" class="form-control" id="email"  placeholder="Enter Email"></div>
+   
+  
 
   <div class="form-group">
 
@@ -31,6 +28,12 @@
     <input name="address" type="text" class="form-control" id="address"  placeholder="Enter Address"></div>
 
     <div class="form-group">
+    <div class="form-group">
+
+<label for="age">Age</label>
+
+<input name="age" type="number" class="form-control" id="age"  placeholder="Enter age"></div>
+
 
     <label for="license">License</label>
 

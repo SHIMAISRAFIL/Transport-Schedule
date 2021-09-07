@@ -2,14 +2,10 @@
 
 @section('contents')
 
-<form action="{{route('user.signup.store')}}" type="form" method="Post" style="border:1px solid #ccc">
-
-
-@csrf 
 
 <body>
 <style type="text/css">body {
-  background-image:url("Frontend/images/sinup_bg.jpg");
+  background-image:url('https://media.istockphoto.com/photos/long-row-of-bright-yellow-school-buses-parked-in-high-school-parking-picture-id1090730818?s=612x612');
   background-position:center;
   background-size:cover;
   
@@ -70,10 +66,6 @@ h4 {
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
-<div style="background-color:#41aaa2; height:400px; width:400px; border-radius:30px; text-align:center;" class="col-md-offset-4">
-<h1 style="text-align:center; padding-top:30px; color:#ffffff;">Sign Up</h1>
-
 @if(session()->has('success'))
                 <div class="alert alert-success">
                     {{ session()->get('success') }}
@@ -90,40 +82,35 @@ h4 {
                     </div>
                 @endif
 
-<form action="{{route('user.signup.store')}}" type="form" method="Post">
-<p>Please fill in this form to create an account.</p>
+<form action="{{route('officeemployee.login.store')}}" method="post">
+    @csrf
+<div style="background-color:#41aaa2; height:400px; width:400px; border-radius:30px; text-align:center;" class="col-md-offset-4">
+<h1 style="text-align:center; padding-top:30px; color:#ffffff;"></h1>
+<p>Please fill in this form to Login.</p>
 
-@csrf
+
+
+<div class="col-sm-12" style="padding-top:10px;">
+<input  type="email" class="form-control" id="email" placeholder="Enter email" name="email" style="border-radius:15px;">
+</div>
+
 
 
 <div class="col-sm-12" style="padding-top:10px;">
-<input required type="text" class="form-control" id="name" placeholder="Enter Name" name="name" style="border-radius:15px;">
+<input type="password" class="form-control" id="password" placeholder=" Password" name="password" style="border-radius:15px;">
 </div>
 
-<div class="col-sm-12" style="padding-top:10px;">
-<input required type="email" class="form-control" id="email" placeholder="Enter email" name="email" style="border-radius:15px;">
-</div>
-
-<div class="col-sm-12" style="padding-top:10px;">
-<input required type="text" class="form-control" id="address" placeholder="Enter Address" name="address" style="border-radius:15px;">
-</div>
-
-<div class="col-sm-12" style="padding-top:10px;">
-<input required type="text" class="form-control" id="phone" placeholder="Enter Mobile No." name="phone" style="border-radius:15px;">
-</div>
-<div class="col-sm-12" style="padding-top:10px;">
-<input required type="password" class="form-control" id="password" placeholder="Password" name="password" style="border-radius:15px;">
-</div>
-<br></br>
-<p>By creating an account you agree to our  <a href="{{route('term')}}" style="color:dodgerred">Terms & Privacy</a>.</p>
+<div class="col-sm-12"  style="padding-top:10px;" >
+<input type="checkbox">Remember Me
+ </div>
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+     
+      <button type="submit" class="signupbtn">Login</button>
     </div>
-
-</body>
 </form>
+</body>
+
 
 
 

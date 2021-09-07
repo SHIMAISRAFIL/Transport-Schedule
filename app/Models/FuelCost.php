@@ -9,4 +9,9 @@ class FuelCost extends Model
 {
     use HasFactory;
     protected $guarded=[];
+    public function transport()
+    {
+
+    return $this->belongsto(Transport::class);
+    }
 }

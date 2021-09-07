@@ -9,4 +9,10 @@ class Schedule extends Model
 {
     use HasFactory;
     protected $guarded=[];
+
+    public function regulartrip()
+    {
+
+    return $this->belongsto(RegularTrip::class);
+    }
 }

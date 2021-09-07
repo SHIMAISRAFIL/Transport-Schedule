@@ -15,6 +15,7 @@
 <thead>
     <tr>
       <th scope="col">ID</th>
+      <th scope="col">Transport image</th>
       <th scope="col">Driver Name</th>
       <th scope="col">Transport Type</th>
       <th scope="col">Transport No.</th>
@@ -25,12 +26,18 @@
   <tbody>
   @foreach($transports as $transport)
     <tr>
+      
       <th scope="row">{{$transport->id}}</th>
+      <td>
+                <img src="{{url('/uploads/'.$transport->image)}}" width="100px" alt="transport image">
+            </td>
       <td>{{$transport->driver->name}}</td>
       <td>{{$transport->transport_type}}</td>
       <td>{{$transport->transport_number}}</td>
       
       <td><a href="" class="btn btn-primary">View</a></td>
+      <td><a href="" class="btn btn-warning">Edit</a></td>
+      <td><a onclick="return confirm('Are you sure you want to delete this item?');" href="{{route('transport.delete', $transport->id)}}" class="btn btn-danger">Delete</a></td>
     </tr>
     @endforeach
 </tbody>

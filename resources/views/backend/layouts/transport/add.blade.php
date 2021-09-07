@@ -6,7 +6,7 @@
 
 <h1>Transport Info</h1>
 
-<form action="{{route('transport.store')}}" method="post">
+<form action="{{route('transport.store')}}" method="post" enctype="multipart/form-data">
   @csrf
   <div class="form-group">
           <label for="name">Select Driver </label>
@@ -32,6 +32,12 @@
 
     <input name="transport_number" type="text" class="form-control" id="transport_number"  placeholder="Enter Transport No."></div>
 
+    <div class="form-group">
+                            <label for="description">Upload Product Image</label>
+                            <input type="file" class="form-control" name="transport_image">
+                          </div>
+
+    
   
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

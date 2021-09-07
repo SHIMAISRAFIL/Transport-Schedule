@@ -17,12 +17,12 @@
         <tbody>
 @foreach($user as $data)
         <tr>
-            <th scope="row">1</th>
+            <th scope="row">{{$data->id}}</th>
             <td>{{$data->role}}</td>
             <td>{{$data->name}}</td>
             <td>{{$data->email}}</td>
             
-            <td>view</td>
+            <td>   <a href="" class="btn btn-success">View</a></td>
         </tr>
         @endforeach
         </tbody>

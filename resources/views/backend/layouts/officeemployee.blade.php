@@ -27,7 +27,7 @@
                 <td>{{$data->name}}</td>
                 <td>{{$data->email}}</td>
                 <td>{{$data->role}}</td>
-                <td>view</td>
+                <td>   <a href="" class="btn btn-success">View</a></td>
             </tr>
         @endforeach
         </tbody>

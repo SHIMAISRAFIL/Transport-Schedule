@@ -4,47 +4,44 @@
                           
 
 
-<h1>Regular Trip</h1>
+<h1> Trip</h1>
                             
 <form action="{{route('regulartrip.store')}}" method="post">
 @csrf
-  <div class="form-group">
-    <label for="date">Date </label>
-    <input name='date' id='date' type="date" class="form-control" placeholder="Enter Date">
-  </div>
   
 
-  <div class="form-group">
+
+                            <div class="form-group">
   
-    <label for="time">Time</label>
+    <label for="transport_number">Select Transport No.</label>
 
-    <input class="form-control" type="time" name="time" id="time" placeholder="Enter Time">
-
-  </div>
-
-  <div class="form-group">
-  
-    <label for="location">Location</label>
-
-    <input class="form-control" type="text" name="location" id="location" placeholder="Enter Location">
-
-  </div>
+    <select class="form-control" id="transport_number" name="transport_id">
+    @foreach($transports as $transport)
+				<option value="{{$transport->id}}">{{$transport->transport_number}}</option>
+				@endforeach
+    </select>
 
   <div class="form-group">
-  
-    <label for="driver_name">Driver name</label>
-
-    <input class="form-control" type="text" name="driver_name" id="driver_name" placeholder="Enter Driver name">
-
+    <label for="locationfrom">Location From</label>
+    <select class="form-control" name ="locationfrom" id="locationfrom">
+    
+    @foreach($locations as $location)
+				<option value="{{$location->id}}">{{$location-> location}}</option>
+				@endforeach
+    </select>
   </div>
-
   <div class="form-group">
-  
-    <label for="transport_number">Transport</label>
-
-    <input class="form-control" type="text" name="transport_number" id="transport_number" placeholder="Enter Transport Number">
-
+    <label for="locationto">Location To</label>
+    <select class="form-control" name="locationto" id="locationto">
+    
+    @foreach($locations as $location)
+				<option value="{{$location->id}}">{{$location->location}}</option>
+				@endforeach
+    </select>
   </div>
+
+  
+  
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

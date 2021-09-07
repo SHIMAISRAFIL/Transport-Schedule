@@ -17,14 +17,13 @@
 <table class="table">
         <thead>
         <tr>
-            <th scope="col">ID</th>
+            <th scope="col">#</th>
+            <th scope="col">Trip Id</th>
             <th scope="col">Date</th>
             <th scope="col">Time</th>
-            <th scope="col">Location</th>
             
-            <th scope="col">Transport Number</th>
             <th scope="col">Status</th>
-            
+            <th scope="col">Action</th>
         </tr>
         </thead>
         
@@ -33,15 +32,16 @@
     @foreach($schedules as $schedule)
         <tr>
             <th scope="row">{{$schedule->id}}</th>
+            <th scope="row">{{$schedule->regulartrip->id}}</th>
             <td>{{$schedule->date}}</td>
             
             <td>{{$schedule->time}}</td>
-            <td>{{$schedule->location}}</td>
-         
-            <td>{{$schedule->transport_number}}</td>
+            
 
             <td>{{$schedule->status}}</td>
-            <td>   <a href="" class="btn btn-success">View</a></td>
+            <td> <a href="" class="btn btn-success">View</a></td>
+            <td><a href="" class="btn btn-warning">Edit</a></td>
+      <td><a onclick="return confirm('Are you sure you want to delete this ?');" href="{{route('schedule.delete', $schedule->id)}}" class="btn btn-danger">Delete</a></td>
         </tr>
         @endforeach
         </tbody>

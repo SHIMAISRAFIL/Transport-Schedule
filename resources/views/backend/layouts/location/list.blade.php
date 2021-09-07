@@ -22,6 +22,7 @@
             <th scope="col">Location Name</th>
          
             <th scope="col">Status</th>
+            <th scope="col">Action</th>
             
         </tr>
         </thead>
@@ -35,9 +36,9 @@
             <td>{{$location->location}}</td>
 
             <td>{{$location->status}}</td>
-            <td>
-                <a href="" class="btn btn-success">View</a>
-            </td>
+            <td> <a href="" class="btn btn-success">View</a></td>
+            <td><a href="" class="btn btn-warning">Edit</a></td>
+      <td><a onclick="return confirm('Are you sure you want to delete this location ?');" href="{{route('location.delete', $location->id)}}" class="btn btn-danger">Delete</a></td>
         </tr>
         @endforeach
         </tbody>

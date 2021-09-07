@@ -11,24 +11,39 @@ class FuelCostController extends Controller
 {
     public function list()
 
-    {   $fuelcosts=FuelCost::all();
-        return view('backend.layouts.fuelcost.list', compact('fuelcosts'));
+    {   $fuelcosts=FuelCost::with(['transport'])->get();
+        $transports = Transport::all();
+        return view('backend.layouts.fuelcost.list', compact('fuelcosts','transports'));
     }
 
    
     public function create()
 
     {
-        $transportids=Transport::all();
-        // dd($transportids);
-        return view('backend.layouts.fuelcost.create',compact('transportids'));
+        $transports=Transport::all();
+        
+        return view('backend.layouts.fuelcost.create',compact('transports'));
+
     }
+    public function delete($id)
+    {
+
+        $fuelcosts=FuelCost::find($id);
+        if($fuelcosts)
+        {
+            $fuelcosts->delete();
+            return redirect()->back()->with('message',' Deleted successfully.');
+        }
+        return redirect()->back()->with('message','Nothing found to delete.');
+    }
+
+    
     public function store(Request $request)
     { 
         //dd($request->all());
         FuelCost::create([
             
-            'transportid'=>$request->transportid,
+            'transport_id'=>$request->transport_id,
             'fueltype'=>$request->fueltype,
             'fuelprice'=>$request->fuelprice,
             'fuelquantity'=>$request->fuelquantity,

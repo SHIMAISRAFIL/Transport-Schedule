@@ -15,9 +15,13 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Driver Name</th>
-      
+      <th scope="col">Email Address</th>
+      <th scope="col">Address</th>
       <th scope="col">Age</th>
       <th scope="col">License no.</th>
+      <th scope="col">Experience years</th>
+      <th scope="col">Phone no</th>
+      <th scope="col">password</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -28,11 +32,17 @@
       <th scope="row">{{$driver->id}}</th>
       
       <td>{{$driver->name}}</td>
-     
-     
+      <td>{{$driver->email}}</td>
+      <td>{{$driver->address}}</td>
       <td>{{$driver->age}}</td>
       <td>{{$driver->license}}</td>
+      <td>{{$driver->experience}}y</td>
+      <td>{{$driver->phone}}</td>
+      <td>{{$driver->password}}</td>
+      
       <td><a href="{{route('driver.transport', $driver->id)}}" class="btn btn-primary">View</a></td>
+      <td><a href="" class="btn btn-warning">Edit</a></td>
+      <td><a onclick="return confirm('Are you sure you want to delete this driver?');" href="{{route('driver.delete', $driver->id)}}" class="btn btn-danger">Delete</a></td>
     </tr>
     @endforeach
 </tbody>

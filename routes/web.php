@@ -1,8 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\HomeController;
-use App\Http\Controllers\Backend\CategoryController;
-use App\Http\Controllers\Backend\ProductController;
+
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\BackendUserController;
 use App\Http\Controllers\Backend\OfficeEmployeeController;
@@ -29,29 +28,31 @@ Route::get('/about', [FrontHomeController::class, 'about'])->name('about');
 Route::get('/contact', [FrontHomeController::class, 'contact'])->name('contact');
 Route::get('/signup', [UserController::class, 'signupform'])->name('user.signup');
 Route::post('/signup/store', [UserController::class, 'signupstore'])->name('user.signup.store');
+Route::get('/terms', [FrontHomeController::class, 'term'])->name('term');
+
+//officeemployeelogin
+Route::get('officeemployee/login', [UserController::class, 'login'])->name('officeemployee.login');
+Route::post('officeemployee/login/store', [UserController::class, 'loginstore'])->name('officeemployee.login.store');
+
+Route::group(['prefix'=>'officeemployee','middleware'=>'auth'],function (){
+    Route::get('/logout',[UserController::class,'logout'])->name('officeemployee.logout');
+});
+
+
 
 
 //admin panel routes
 Route::get('admin/login', [BackendUserController::class, 'login'])->name('admin.login');
+Route::post('admin/login/store', [BackendUserController::class, 'loginstore'])->name('admin.login.store');
 
-Route::group(['prefix'=>'admin', 'middleware'=>'auth'],function(){
-   
 
-    Route::get ('/', function () {
-        return view('backend.master');
-    });
-    
-    
-    Route::get('/home', function()
-    { 
-       
-        return view('backend.layouts.home');
-    });
-    
-    
-    
+Route::group(['prefix'=>'admin','middleware'=>['auth','role']],function(){
+    // 
+
+    Route::get('/',[HomeController::class,'home'])->name('dashboard');
    
- 
+    Route::get('logout', [BackendUserController::class, 'logout'])->name('logout');
+    
     
 
 
@@ -63,28 +64,10 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'],function(){
     
 
 
-    //category
     
-    Route::get('/all-categories', [CategoryController::class, 'list'])->name('category.list');
     
-    Route::get('/all-categories/create', [CategoryController::class, 'create'])->name('category.create');
+   
     
-    Route::post('/all-categories/store', [CategoryController::class, 'store'])->name('category.store');
-    
-    Route::get('/all-categories/{id}/products',[CategoryController::class,'allProduct'])->name('category.product');
-    
-    //products
-    
-    Route::get('/all-products/create', [ProductController::class, 'create'])->name('product.create');
-    
-    Route::get('/all-products', [ProductController::class, 'list'])->name('product.list');
-    
-    Route::post('/all-produtcs/store', [ProductController::class, 'store'])->name('product.store');
-    //admins
-    
-    Route::get('/admins/info', [AdminController::class, 'info'])->name('admin.info');
-    Route::get('/admins', [AdminController::class, 'add'])->name('admin.add');
-    Route::post('/admins/store', [AdminController::class, 'store'])->name('admin.store');
     
     // office employee
     
@@ -97,36 +80,53 @@ Route::group(['prefix'=>'admin', 'middleware'=>'auth'],function(){
     Route::get('/all-drivers', [DriverController::class, 'appoint'])->name('driver.appoint');
     Route::post('/all-drivers/store', [DriverController::class, 'store'])->name('driver.store');
     Route::get('/all-drivers/{id}/transports',[DriverController::class,'allTransport'])->name('driver.transport');
+    Route::get('/all-drivers/delete/{id}', [DriverController::class, 'delete'])->name('driver.delete');
+    Route::get('/all-drivers/edit/{id}',[DriverController::class,'edit'])->name('driver.edit');
+    Route::put('/all-drivers/update/{id}',[DriverControllerr::class,'update'])->name('driver.update');
+    
     //transport
     
     Route::get('/transports/info', [TransportController::class, 'info'])->name('transport.info');
     Route::get('/transports', [TransportController::class, 'add'])->name('transport.add');
     Route::post('/transports/store', [TransportController::class, 'store'])->name('transport.store');
+    Route::get('/transports/delete/{id}', [TransportController::class, 'delete'])->name('transport.delete');
+    Route::get('/transports/edit/{id}',[TransportController::class,'edit'])->name('transport.edit');
+    Route::put('/transports/update/{id}',[TransportController::class,'update'])->name('transport.update');
+    
     
     //regulartrip
     Route::get('/regular-trips', [RegularTripController::class, 'list'])->name('regulartrip.list');
     Route::get('/regular-trips/create', [RegularTripController::class, 'create'])->name('regulartrip.create');
     Route::post('/regular-trips/store', [RegularTripController::class, 'store'])->name('regulartrip.store');
-    
+    Route::get('/regular-trips/delete/{id}', [RegularTripControlle::class, 'delete'])->name('regulartrip.delete');
+    Route::get('/products/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
+    Route::put('/products/update/{id}',[ProductController::class,'update'])->name('product.update');
+   
+   
     //schedule
     Route::get('/schedules', [ScheduleController::class, 'list'])->name('schedule.list');
     Route::get('/schedules/create', [ScheduleController::class, 'create'])->name('schedule.create');
     Route::post('/schedules/store', [ScheduleController::class, 'store'])->name('schedule.store');
-    
-    
+    Route::get('/schedules/delete/{id}', [ScheduleController::class, 'delete'])->name('schedule.delete');
+    Route::get('/products/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
+    Route::put('/products/update/{id}',[ProductController::class,'update'])->name('product.update');
+   
+   
     //location
     Route::get('/locations', [LocationController::class, 'list'])->name('location.list');
     Route::get('/locations/create', [LocationController::class, 'create'])->name('location.create');
     Route::post('/locations/store', [LocationController::class, 'store'])->name('location.store');
-
-
+    Route::get('/locations/delete/{id}', [LocationController::class, 'delete'])->name('location.delete');
+    Route::get('/products/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
+    Route::put('/products/update/{id}',[ProductController::class,'update'])->name('product.update');
 //fuelcostcalculation
     Route::get('/fuelcosts', [FuelCostController::class, 'list'])->name('fuelcost.list');
     
     Route::get('/fuelcosts/create', [FuelCostController::class, 'create'])->name('fuelcost.create');
     Route::post('/fuelcosts/store', [FuelCostController::class, 'store'])->name('fuelcost.store');
-
-
+    Route::get('/fuelcosts/delete/{id}', [FuelCostController::class, 'delete'])->name('fuelcost.delete');
+    Route::get('/products/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
+    Route::put('/products/update/{id}',[ProductController::class,'update'])->name('product.update');
    
 
 });

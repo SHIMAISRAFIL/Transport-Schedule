@@ -10,17 +10,18 @@
 
 <form action="{{route('fuelcost.store')}}" method="post">
 	@csrf
-<td>Transport Id</td><td>		
-	  
-			<select name="transportid" >
-				@foreach($transportids as $transportid)
-				<option value="{{$transportid->id}}">{{$transportid->id}}</option>
-				@endforeach
-				<!-- <option value="2">3</option>
-				<option value="3">4</option>
-				<option value="4" selected>1</option> -->
-			</select>
-			<br></br>
+
+	<div class="form-group">
+  
+  <label for="transport_number">Select Transport No.</label>
+
+  <select class="form-control" id="transport_number" name="transport_id">
+  @foreach($transports as $transport)
+			  <option value="{{$transport->id}}">{{$transport->transport_number}}</option>
+			  @endforeach
+  </select>
+
+
 
   
   <td>Fuel Type</td><td>		

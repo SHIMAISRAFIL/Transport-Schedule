@@ -25,6 +25,18 @@ class DriverController extends Controller
          return view('backend.layouts.driver.appoint');
 
     }
+    public function delete($id)
+    {
+
+      $drivers=Driver::find($id);
+        if($drivers)
+        {
+            $drivers->delete();
+            return redirect()->back()->with('message','Driver Deleted successfully.');
+        }
+        return redirect()->back()->with('message','No Driver found to delete.');
+    }
+
 
     public function store(Request $request)
     { 
@@ -32,8 +44,9 @@ class DriverController extends Controller
         Driver::create([
             
             'name'=>$request->name,
-            'age'=>$request->age,
             'email'=>$request->email,
+            'age'=>$request->age,
+            
             'address'=>$request->address,
             'license'=>$request->license,
             'experience'=>$request->experience,

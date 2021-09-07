@@ -9,7 +9,11 @@ class HomeController extends Controller
     public function home()
 
     { 
-        return view (view:'backend.layouts.home');
+        $title='Dashboard';
+        $link='Dashboard / home';
+        return view('backend.layouts.home',compact('title','link'));
+    
+        
     }
 
 

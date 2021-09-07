@@ -24,4 +24,9 @@ class FrontHomeController extends Controller
     {
       return view('frontend.layouts.contact');
     }
+    public function term()
+
+    {
+      return view('frontend.layouts.termprivacy');
+    }
 }
