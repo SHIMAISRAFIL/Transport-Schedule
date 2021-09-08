@@ -36,7 +36,7 @@
       <td>{{$transport->transport_number}}</td>
       
       <td><a href="" class="btn btn-primary">View</a></td>
-      <td><a href="" class="btn btn-warning">Edit</a></td>
+      <td><a href="{{route('transport.edit', $transport->id)}}" class="btn btn-warning">Edit</a></td>
       <td><a onclick="return confirm('Are you sure you want to delete this item?');" href="{{route('transport.delete', $transport->id)}}" class="btn btn-danger">Delete</a></td>
     </tr>
     @endforeach

@@ -39,7 +39,7 @@
             
 
             <td>{{$schedule->status}}</td>
-            <td> <a href="" class="btn btn-success">View</a></td>
+            <td> <a href="{{route('schedule.trip', $schedule->id)}}" class="btn btn-success">View</a></td>
             <td><a href="" class="btn btn-warning">Edit</a></td>
       <td><a onclick="return confirm('Are you sure you want to delete this ?');" href="{{route('schedule.delete', $schedule->id)}}" class="btn btn-danger">Delete</a></td>
         </tr>

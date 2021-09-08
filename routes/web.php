@@ -98,18 +98,20 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','role']],function(){
     Route::get('/regular-trips', [RegularTripController::class, 'list'])->name('regulartrip.list');
     Route::get('/regular-trips/create', [RegularTripController::class, 'create'])->name('regulartrip.create');
     Route::post('/regular-trips/store', [RegularTripController::class, 'store'])->name('regulartrip.store');
-    Route::get('/regular-trips/delete/{id}', [RegularTripControlle::class, 'delete'])->name('regulartrip.delete');
-    Route::get('/products/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
-    Route::put('/products/update/{id}',[ProductController::class,'update'])->name('product.update');
+    Route::get('/regular-trips/delete/{id}', [RegularTripController::class, 'delete'])->name('regulartrip.delete');
+    Route::get('/regular-trips/edit/{id}',[RegularTripController::class,'edit'])->name('regulartrip.edit');
+    Route::put('/regular-trips/update/{id}',[RegularTripController::class,'update'])->name('regulartrip.update');
    
    
     //schedule
     Route::get('/schedules', [ScheduleController::class, 'list'])->name('schedule.list');
     Route::get('/schedules/create', [ScheduleController::class, 'create'])->name('schedule.create');
     Route::post('/schedules/store', [ScheduleController::class, 'store'])->name('schedule.store');
+    
+    Route::get('/schedules/alltrips/{id}', [ScheduleController::class, 'alltrips'])->name('schedule.trip');
     Route::get('/schedules/delete/{id}', [ScheduleController::class, 'delete'])->name('schedule.delete');
-    Route::get('/products/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
-    Route::put('/products/update/{id}',[ProductController::class,'update'])->name('product.update');
+    Route::get('/schedules/edit/{id}',[ScheduleController::class,'edit'])->name('schedule.edit');
+    Route::put('/schedules/update/{id}',[ScheduleController::class,'update'])->name('schedule.update');
    
    
     //location
@@ -117,16 +119,16 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','role']],function(){
     Route::get('/locations/create', [LocationController::class, 'create'])->name('location.create');
     Route::post('/locations/store', [LocationController::class, 'store'])->name('location.store');
     Route::get('/locations/delete/{id}', [LocationController::class, 'delete'])->name('location.delete');
-    Route::get('/products/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
-    Route::put('/products/update/{id}',[ProductController::class,'update'])->name('product.update');
+    Route::get('locations/edit/{id}',[LocationController::class,'edit'])->name('location.edit');
+    Route::put('/locations/update/{id}',[LocationController::class,'update'])->name('location.update');
 //fuelcostcalculation
     Route::get('/fuelcosts', [FuelCostController::class, 'list'])->name('fuelcost.list');
     
     Route::get('/fuelcosts/create', [FuelCostController::class, 'create'])->name('fuelcost.create');
     Route::post('/fuelcosts/store', [FuelCostController::class, 'store'])->name('fuelcost.store');
     Route::get('/fuelcosts/delete/{id}', [FuelCostController::class, 'delete'])->name('fuelcost.delete');
-    Route::get('/products/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
-    Route::put('/products/update/{id}',[ProductController::class,'update'])->name('product.update');
+    Route::get('/fuelcosts/edit/{id}',[FuelCostController::class,'edit'])->name('fuelcost.edit');
+    Route::put('/fuelcosts/update/{id}',[FuelCostController::class,'update'])->name('fuelcost.update');
    
 
 });

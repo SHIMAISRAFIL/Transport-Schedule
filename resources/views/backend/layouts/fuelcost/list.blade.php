@@ -55,7 +55,7 @@
             <td>{{$fuelcost->status}}</td>
            
             <td> <a href="" class="btn btn-success">View</a> </td>
-      <td><a href="" class="btn btn-warning">Edit</a></td>
+      <td><a href="{{route('fuelcost.edit', $fuelcost->id)}}" class="btn btn-warning">Edit</a></td>
       <td><a onclick="return confirm('Are you sure you want to delete this ?');" href="{{route('fuelcost.delete', $fuelcost->id)}}" class="btn btn-danger">Delete</a></td>
            
         </tr>

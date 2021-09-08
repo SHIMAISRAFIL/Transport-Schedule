@@ -59,4 +59,28 @@ class FuelCostController extends Controller
                  
     }
 
+     public function edit($id)
+     {  $fuelcosts=FuelCost::find($id);
+        //dd($fuelcosts);
+        $transports=Transport::all();
+        return view('backend.layouts.fuelcost.edit', compact('transports', 'fuelcosts'));
+     }
+
+     public function update(Request $request, $id)
+     {
+         $fuelcosts=FuelCost::find($id);
+         $fuelcosts->update([
+            'transport_id'=>$request->transport_id,
+            'fueltype'=>$request->fueltype,
+            'fuelprice'=>$request->fuelprice,
+            'fuelquantity'=>$request->fuelquantity,
+            'date'=>$request->date,
+            'place'=>$request->place,
+            'remarks'=>$request->remarks,
+
+         ]);
+
+         return redirect()->route('fuelcost.list')->with('message','Fuelcost updated successfully.');
+     }
+
 }

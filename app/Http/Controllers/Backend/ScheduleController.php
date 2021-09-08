@@ -53,4 +53,9 @@ class ScheduleController extends Controller
          return redirect()->route('schedule.list');
                  
      }
+     public function alltrips($id)
+     {
+        $regulartrips = RegularTrip::where('schedule_id',$id)->get();
+           return view('backend.layouts.schedule.trip-view', compact('$regulartrips'));
+     }
 }

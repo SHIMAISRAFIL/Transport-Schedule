@@ -60,4 +60,24 @@ class TransportController extends Controller
          return redirect()->route('transport.info');
                  
      }
+
+     public function edit($id)
+    {
+      $transports= Transport::find($id);
+      $drivers = Driver:: all();
+        return view('backend.layouts.transport.edit',compact('drivers','transports'));
+    }
+
+    public function update(Request $request,$id)
+    {
+//        dd($request->all());
+        $transports= Transport::find($id);
+        $transports->update([
+            'driver_id'=>$request->driver_id,
+            'transport_type'=>$request->transport_type,
+            'transport_number'=>$request->transport_number,
+        ]);
+
+        return redirect()->route('transport.info')->with('message','Transport updated successfully.');
+    }
 }
