@@ -76,8 +76,8 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','role']],function(){
     // Route::post('/all-office-employees/store', [OfficeEmployeeController::class, 'store'])->name('officeemployee.store');
     //drivers
     
-    Route::get('/all-drivers/info', [DriverController::class, 'info'])->name('driver.info');
-    Route::get('/all-drivers', [DriverController::class, 'appoint'])->name('driver.appoint');
+    Route::get('/all-drivers', [DriverController::class, 'list'])->name('driver.list');
+    Route::get('/driver/create', [DriverController::class, 'create'])->name('driver.create');
     Route::post('/all-drivers/store', [DriverController::class, 'store'])->name('driver.store');
     Route::get('/all-drivers/{id}/transports',[DriverController::class,'allTransport'])->name('driver.transport');
     Route::get('/all-drivers/delete/{id}', [DriverController::class, 'delete'])->name('driver.delete');
@@ -86,8 +86,8 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','role']],function(){
     
     //transport
     
-    Route::get('/transports/info', [TransportController::class, 'info'])->name('transport.info');
-    Route::get('/transports', [TransportController::class, 'add'])->name('transport.add');
+    Route::get('/transports', [TransportController::class, 'list'])->name('transport.list');
+    Route::get('/transports/create', [TransportController::class, 'create'])->name('transport.create');
     Route::post('/transports/store', [TransportController::class, 'store'])->name('transport.store');
     Route::get('/transports/delete/{id}', [TransportController::class, 'delete'])->name('transport.delete');
     Route::get('/transports/edit/{id}',[TransportController::class,'edit'])->name('transport.edit');

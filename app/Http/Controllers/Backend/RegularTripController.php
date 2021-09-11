@@ -13,13 +13,14 @@ class RegularTripController extends Controller
 {
     public function list()
 
-    {    
+    {     //variable=Model::relation name
         $regulartrips = RegularTrip::with(['locationFrom','locationTo'])->get();
         $regulartrips = RegularTrip::with(['transport'])->get();
        // dd($regulartrips);
        $locations= Location::all();
        $transports = Transport::all();
-        return view('backend.layouts.regulartrip.list', compact('regulartrips','transports', 'locations'));
+       //dd($transports );
+      return view('backend.layouts.regulartrip.list', compact('regulartrips','transports', 'locations'));
     }
 
     public function create()
@@ -40,6 +41,31 @@ class RegularTripController extends Controller
             return redirect()->back()->with('message','Deleted successfully.');
         }
         return redirect()->back()->with('message','Nothing found to delete.');
+    }
+
+    public function edit($id)
+    {
+      
+        $regulartrips = RegularTrip::find($id);
+        $locations= Location::all();
+        $transports = Transport::all();
+        return view('backend.layouts.regulartrip.edit',compact('regulartrips','transports','locations'));
+    }
+
+    public function update(Request $request,$id)
+    {
+//        dd($request->all());
+        $regulartrips = RegularTrip::find($id);
+        $regulartrips->update([
+            'transport_id'=>$request->transport_id,
+            'locationfrom'=>$request->locationfrom,
+          
+            'locationto'=>$request->locationto,
+        
+        
+        ]);
+
+        return redirect()->route('regulartrip.list')->with('message','TripInfo updated successfully.');
     }
 
     public function store(Request $request)

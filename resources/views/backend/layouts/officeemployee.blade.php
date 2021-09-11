@@ -13,7 +13,7 @@
 <table class="table">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">SL</th>
             <th scope="col">User Name</th>
             <th scope="col">Email</th>
             <th scope="col">Type</th>
@@ -23,7 +23,7 @@
         <tbody>
         @foreach($user as $data)
             <tr>
-                <th scope="row">1</th>
+             <th scope="row">{{$data->id}}</th></th>
                 <td>{{$data->name}}</td>
                 <td>{{$data->email}}</td>
                 <td>{{$data->role}}</td>

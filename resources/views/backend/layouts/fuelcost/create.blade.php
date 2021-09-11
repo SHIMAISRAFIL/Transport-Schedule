@@ -58,7 +58,7 @@
 	  <br></br>
 	  <td>Name of Filling Station</td><td>
 
-	  <input type="text" name="place" value="" class="inhalf indollar" onKeyUp="iptfieldCheck(this, 'r', 'pn');">
+	 
 			<select name="place" >
 				<option value="Gazipur">Gazipur</option>
 				<option value="Khilkhet">Khikhet</option>
@@ -67,6 +67,7 @@
 				<option value="Abdullahpor" selected>Abdullahpor</option>
 			</select>
 			<br></br>
+			
 
 			<td>Remarks</td> <td>		
 	  <input type="description" name="remarks" value="" class="inhalf indollar" onKeyUp="iptfieldCheck(this, 'r', 'pn');">

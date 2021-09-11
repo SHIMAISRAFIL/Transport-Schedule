@@ -10,19 +10,21 @@ use App\Models\Transport;
 
 class DriverController extends Controller
 {
-    public function info()
+    public function list()
 
     { 
-        
+    
         $drivers =Driver::all();
-        return view('backend.layouts.driver.info',compact('drivers'));
+       
+        return view('backend.layouts.driver.list',compact('drivers'));
         
     }
 
-    public function appoint()
-     {  
-      
-         return view('backend.layouts.driver.appoint');
+    public function create()
+    {   
+        
+        $drivers =Driver::all();
+         return view('backend.layouts.driver.create',compact('drivers') );
 
     }
     public function delete($id)
@@ -35,14 +37,41 @@ class DriverController extends Controller
             return redirect()->back()->with('message','Driver Deleted successfully.');
         }
         return redirect()->back()->with('message','No Driver found to delete.');
+     }
+
+    public function edit($id)
+    {
+       $drivers= Driver::find($id);
+      
+        return view('backend.layouts.driver.edit',compact('drivers'));
     }
 
+
+    public function update(Request $request,$id)
+    {
+//        dd($request->all());
+        $drivers= Driver::find($id);
+        $drivers->update([
+            
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'age'=>$request->age,
+            'address'=>$request->address,
+            'license'=>$request->license,
+            'experience'=>$request->experience,
+            'phone'=>$request->phone,
+            'password'=>$request->password,
+        
+        ]);
+
+        return redirect()->route('driver.list')->with('message','Driver Info updated successfully.');
+    }
 
     public function store(Request $request)
     { 
         //dd($request->all());
         Driver::create([
-            
+        
             'name'=>$request->name,
             'email'=>$request->email,
             'age'=>$request->age,
@@ -56,7 +85,7 @@ class DriverController extends Controller
  
          ]);
  
-         return redirect()->route('driver.info');
+         return redirect()->route('driver.list');
                  
     }
 

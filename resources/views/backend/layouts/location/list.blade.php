@@ -17,31 +17,31 @@
 <table class="table">
         <thead>
         <tr>
-            <th scope="col">ID</th>
-            
+            <th scope="col">SL</th>
             <th scope="col">Location Name</th>
-         
-            <th scope="col">Status</th>
             <th scope="col">Action</th>
-            
         </tr>
         </thead>
         
     <tbody>
-
-    @foreach($locations as $location)
-        <tr>
-            <th scope="row">{{$location->id}}</th>
+  
+    @foreach($locations as $key=>$location)
           
+          <tr>
+            <th scope="row">{{$key+1}}
+
             <td>{{$location->location}}</td>
 
-            <td>{{$location->status}}</td>
-            <td> <a href="" class="btn btn-success">View</a></td>
-            <td><a href="" class="btn btn-warning">Edit</a></td>
-      <td><a onclick="return confirm('Are you sure you want to delete this location ?');" href="{{route('location.delete', $location->id)}}" class="btn btn-danger">Delete</a></td>
-        </tr>
-        @endforeach
-        </tbody>
+
+            <td> 
+                 <a href="{{route('location.edit', $location->id)}}" class="btn btn-warning">Edit</a>
+                 <a onclick="return confirm('Are you sure you want to delete this location ?');" href="{{route('location.delete', $location->id)}}" class="btn btn-danger">Delete</a>
+           </td>
+           </th>
+           </tr>
+        
+@endforeach
+</tbody>
 </table> 
 
 @endsection

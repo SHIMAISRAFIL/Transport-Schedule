@@ -6,7 +6,7 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">SL</th>
             <th scope="col">Type</th>
             <th scope="col">User Name</th>
             <th scope="col">Email</th>

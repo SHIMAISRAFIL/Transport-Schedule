@@ -11,7 +11,7 @@
 @csrf
   <div class="form-group">
           <label for="name">Select Driver </label>
-         <select name="driver_id" class="form-control" id="" ></div>
+         <select name="driver_id" class="form-control" id="driver_id" ></div>
 
 
  @foreach($drivers as $driver)

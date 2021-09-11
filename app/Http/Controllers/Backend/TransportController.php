@@ -10,19 +10,19 @@ use Illuminate\Mail\Transport\Transport as TransportTransport;
 
 class TransportController extends Controller
 {
-    public function info()
+    public function list()
 
     {
         $transports= Transport::with('driver')->paginate(3);
         //$transports = Transport::all();
-        return view('backend.layouts.transport.info',compact('transports'));
+        return view('backend.layouts.transport.list',compact('transports'));
     }
 
-    public function add()
+    public function create()
     {    $drivers = Driver:: all();
       
         
-         return view('backend.layouts.transport.add', compact('drivers'));
+         return view('backend.layouts.transport.create', compact('drivers'));
     }
 
     public function delete($id)
@@ -57,7 +57,7 @@ class TransportController extends Controller
             'image'=>$fileName
                 ]);
  
-         return redirect()->route('transport.info');
+         return redirect()->route('transport.list');
                  
      }
 
@@ -78,6 +78,6 @@ class TransportController extends Controller
             'transport_number'=>$request->transport_number,
         ]);
 
-        return redirect()->route('transport.info')->with('message','Transport updated successfully.');
+        return redirect()->route('transport.list')->with('message','Transport updated successfully.');
     }
 }

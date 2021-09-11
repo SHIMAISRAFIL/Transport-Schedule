@@ -13,6 +13,9 @@
 
     <input name="name" type="text" class="form-control" id="name"  placeholder="Enter Name"></div>
     
+ 
+  
+
     <div class="form-group">
 
     <label for="email">Email address</label>

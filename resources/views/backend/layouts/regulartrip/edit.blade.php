@@ -4,9 +4,10 @@
                           
 
 
-<h1> Trip</h1>
+<h1>update Trip Info</h1>
                             
-<form action="{{route('regulartrip.store')}}" method="post">
+<form action="{{route('regulartrip.update', $regulartrips->id)}}" method="post">
+@method('put')
 @csrf
   
 
@@ -15,7 +16,7 @@
   
     <label for="transport_number">Select Transport No.</label>
 
-    <select class="form-control" id="transport_number" name="transport_id">
+    <select value="{{ $regulartrips->transport_number}}" class="form-control" id="transport_number" name="transport_id">
     @foreach($transports as $transport)
 				<option value="{{$transport->id}}">{{$transport->transport_number}}</option>
 				@endforeach
@@ -26,13 +27,15 @@
     <select class="form-control" name ="locationfrom" id="locationfrom">
     
     @foreach($locations as $location)
-				<option value="{{$location->id}}">{{$location-> location}}</option>
+				<option value="{{ $regulartrips->locationfrom}}"  value="{{$location->id}}">{{$location-> location}}</option>
 				@endforeach
     </select>
   </div>
+
+  
   <div class="form-group">
     <label for="locationto">Location To</label>
-    <select class="form-control" name="locationto" id="locationto">
+    <select value="{{ $regulartrips->locationto}}"  class="form-control" name="locationto" id="locationto">
     
     @foreach($locations as $location)
 				<option value="{{$location->id}}">{{$location->location}}</option>

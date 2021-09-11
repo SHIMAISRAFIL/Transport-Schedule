@@ -17,7 +17,7 @@
 <table class="table">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">SL</th>
             <th scope="col">Trip Id</th>
             <th scope="col">Date</th>
             <th scope="col">Time</th>
@@ -29,23 +29,28 @@
         
     <tbody>
 
-    @foreach($schedules as $schedule)
-        <tr>
-            <th scope="row">{{$schedule->id}}</th>
-            <th scope="row">{{$schedule->regulartrip->id}}</th>
-            <td>{{$schedule->date}}</td>
-            
-            <td>{{$schedule->time}}</td>
-            
+@foreach($schedules as $key=>$schedule)
+        
+           <tr>
+            <th scope="row">{{$key+1}}
 
+      
+            <td>{{$schedule-> regulartrip->id}}</td>
+            <td>{{$schedule->date}}</td>
+            <td>{{$schedule->time}}</td>
             <td>{{$schedule->status}}</td>
-            <td> <a href="{{route('schedule.trip', $schedule->id)}}" class="btn btn-success">View</a></td>
-            <td><a href="" class="btn btn-warning">Edit</a></td>
-      <td><a onclick="return confirm('Are you sure you want to delete this ?');" href="{{route('schedule.delete', $schedule->id)}}" class="btn btn-danger">Delete</a></td>
-        </tr>
-        @endforeach
-        </tbody>
-</table> 
+
+            <td> 
+              <a href="{{route('schedule.trip', $schedule->id)}}" class="btn btn-success">View</a>
+              <a href="{{route('schedule.edit', $schedule->id)}}" class="btn btn-warning">Edit</a>
+              <a onclick="return confirm('Are you sure you want to delete this ?');" href="{{route('schedule.delete', $schedule->id)}}" class="btn btn-danger">Delete</a>
+            
+            </td>
+            </th>
+            </tr>
+@endforeach
+ </tbody>
+ </table> 
 
 
 @endsection

@@ -10,23 +10,35 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Transport Number</th>
-            <th scope="col">Location From</th>
-            <th scope="col">Location To</th>
+     
+   
+        
+          
       
     </tr>
   </thead>
   <tbody>
-   
-  @foreach($regulartrips as $key=>$data)
+   <hr>
+
             <tr>
-                <th scope="row">{{$key+1}}</th>
-                <td>{{$data->transport_number}}</td>
-                <td>{{$data->locationfrom"}}</td>
-                <td>{{$data->locationto"}}</td>
+            <th scope="col">Transport Number</th>
+              <td>{{$regulartrips->transport->transport_number}}</td>
             </tr>
-        @endforeach
+
+            <tr>
+            <th scope="col">Location From</th>
+                <td>{{$regulartrips->locationFrom->location}}</td>
+             
+            </tr>
+
+            <tr>
+            <th scope="col">Location To</th>
+            <td>{{$regulartrips->locationTo->location}}</td>
+             
+            </tr>
+
+          
+      
         </tbody>
     </table>
 @endsection

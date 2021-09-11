@@ -13,7 +13,8 @@ class ScheduleController extends Controller
 {
     public function list()
 
-    { 
+    {     //variable=Model::relation name
+        
         $schedules = Schedule ::with(['regulartrip'])->get();
         $regulartrips = RegularTrip:: all();
 
@@ -38,6 +39,30 @@ class ScheduleController extends Controller
         }
         return redirect()->back()->with('message','Nothing found to delete.');
     }
+    
+    public function edit($id)
+    {
+        $schedules = Schedule::find($id);
+        $regulartrips = RegularTrip:: all();
+        return view('backend.layouts.schedule.edit',compact('regulartrips','schedules'));
+    }
+
+    public function update(Request $request,$id)
+    {
+//        dd($request->all());
+       $schedules = Schedule::find($id);
+       $schedules->update([
+        'regulartrip_id'=>$request->regulartrip_id,
+        'date'=>$request->date,
+        'time'=>$request->time,
+        
+        
+        ]);
+
+        return redirect()->route('schedule.list')->with('message','Schedule updated successfully.');
+    }
+    
+    
     public function store(Request $request)
      { 
     //dd($request->all());
@@ -55,7 +80,7 @@ class ScheduleController extends Controller
      }
      public function alltrips($id)
      {
-        $regulartrips = RegularTrip::where('schedule_id',$id)->get();
-           return view('backend.layouts.schedule.trip-view', compact('$regulartrips'));
+        $regulartrips = RegularTrip::with(['locationFrom','locationTo','transport'])->find($id);
+           return view('backend.layouts.schedule.trip-view', compact('regulartrips'));
      }
 }

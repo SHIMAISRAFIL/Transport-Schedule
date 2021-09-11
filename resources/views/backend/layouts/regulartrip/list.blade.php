@@ -18,7 +18,7 @@
 <table class="table">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">SL</th>
             <th scope="col">Transport Number</th>
             <th scope="col">Location From</th>
             <th scope="col">Location To</th>
@@ -30,22 +30,26 @@
         
     <tbody>
      
+@foreach($regulartrips as $key=>$regulartrip)
+       
+         <tr>
+            <th scope="row">{{$key+1}}
 
-    @foreach($regulartrips as $regulartrip)
-        <tr>
-            <th scope="row">{{$regulartrip->id}}</th>
-
-            <th scope="row">{{$regulartrip->transport->transport_number}}</th>
+            <th scope="row">{{$regulartrip->transport->transport_number}}
             <td>{{$regulartrip->locationFrom->location}}</td>
             <td>{{$regulartrip->locationTo->location}}</td>
           
-            <td> <a href="" class="btn btn-success">View</a></td>
-            <td><a href="" class="btn btn-warning">Edit</a></td>
-      <td><a onclick="return confirm('Are you sure you want to delete this ?');" href="{{route('regulartrip.delete', $regulartrip->id)}}" class="btn btn-danger">Delete</a></td>
-        </tr>
-        @endforeach
-        </tbody>
-</table> 
+
+            <td>
+              <a href="{{route('regulartrip.edit', $regulartrip->id)}}" class="btn btn-warning">Edit</a>
+              <a onclick="return confirm('Are you sure you want to delete this ?');" href="{{route('regulartrip.delete', $regulartrip->id)}}" class="btn btn-danger">Delete</a>
+            
+            </td>
+            </th>
+            </tr>
+@endforeach
+ </tbody>
+ </table> 
 
 
 @endsection

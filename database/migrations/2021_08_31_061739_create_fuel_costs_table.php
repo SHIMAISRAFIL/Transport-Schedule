@@ -15,7 +15,7 @@ class CreateFuelCostsTable extends Migration
     {
         Schema::create('fuel_costs', function (Blueprint $table) {
             $table->id();
-            $table->integer('transport_id');
+            $table->foreignId('transport_id');
             $table->string('fueltype', 100);
             $table->integer('fuelprice');
             $table->integer('fuelquantity');
