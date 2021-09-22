@@ -15,6 +15,8 @@ class CreateUrgentTripsTable extends Migration
     {
         Schema::create('urgent_trips', function (Blueprint $table) {
             $table->id();
+            $table->string('location', 100);
+            $table->string('time', 100);
             $table->timestamps();
         });
     }

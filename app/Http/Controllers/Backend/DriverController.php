@@ -73,6 +73,7 @@ class DriverController extends Controller
         Driver::create([
         
             'name'=>$request->name,
+           
             'email'=>$request->email,
             'age'=>$request->age,
             

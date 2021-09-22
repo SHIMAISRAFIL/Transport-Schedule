@@ -9,9 +9,10 @@
 
 <body>
 <style type="text/css">body {
-  background-image:url("Frontend/images/sinup_bg.jpg");
+  background-image:url("Frontend/images/userLoginImage.jpg");
   background-position:center;
   background-size:cover;
+  background-repeat: no-repeat;
   
   -webkit-font-smoothing: antialiased;
   font: normal 14px Roboto,arial,sans-serif;

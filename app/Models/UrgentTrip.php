@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class UrgentTrip extends Model
 {
     use HasFactory;
+    protected $guarded=[];
 }

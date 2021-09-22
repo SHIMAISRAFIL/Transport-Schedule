@@ -14,8 +14,7 @@
     <input name="name" type="text" class="form-control" id="name"  placeholder="Enter Name"></div>
     
  
-  
-
+    
     <div class="form-group">
 
     <label for="email">Email address</label>
@@ -38,9 +37,9 @@
 <input name="age" type="number" class="form-control" id="age"  placeholder="Enter age"></div>
 
 
-    <label for="license">License</label>
+    <label for="license">License No.</label>
 
-    <input name="license" type="number" class="form-control" id="license"  placeholder="Enter License"></div>
+    <input name="license" type="number" class="form-control" id="license"  placeholder="Enter License No"></div>
     <div class="form-group">
 
 <label for="experience">Experience Years</label>

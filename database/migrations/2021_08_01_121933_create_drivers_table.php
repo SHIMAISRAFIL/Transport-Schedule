@@ -17,6 +17,7 @@ class CreateDriversTable extends Migration
             $table->id();
            
             $table->string('name', 100);
+           
             $table->string('age', 100);
             $table->string('email', 100);
             $table->string('address');

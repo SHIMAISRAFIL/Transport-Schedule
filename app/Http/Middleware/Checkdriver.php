@@ -5,7 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class CheckAdmin
+
+class Checkdriver
 {
     /**
      * Handle an incoming request.
@@ -15,15 +16,7 @@ class CheckAdmin
      * @return mixed
      */
     public function handle(Request $request, Closure $next)
-    {
-        
-        if(auth()->check() && auth()->user()->role=='admin')
-        {
-            return $next($request);
-        }else
-        {
-
-            return redirect()->back()->with('message','You do not have permission');
-        }
+    {  if(auth()->user()->role=='driver')
+        return $next($request);
     }
 }

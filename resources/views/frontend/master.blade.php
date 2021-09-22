@@ -64,3 +64,6 @@
 
 
 		@include('frontend.partials.footer')
+
+
+		

@@ -22,12 +22,20 @@ class BackendUserController extends Controller
         if(Auth::attempt( $credentials))
       
         {
-            //user logged in
-            return redirect()->route('dashboard');
-        }
+            if(auth()->user()->role=='admin' || auth()->user()->role=='officeemployee' || auth()->user()->role=='driver')
+            {
+                return redirect()->route('dashboard');
+            }else
+            {
+                Auth::logout();
+                return redirect()->route('user.signup');
+            }
 
         return redirect()->back()->with('message','invalid user info.');
     }
+}
+    
+
     public function logout()
     {
         Auth::logout();
@@ -43,4 +51,15 @@ class BackendUserController extends Controller
     {  $user= User::all();
         return view('backend.layouts.user', compact('user'));
     }
+
+    // public function search()
+    // {
+    //     // $_GET['key']
+    //     // request()->key
+    //     $key=request()->search;
+    //     $officeemployees=officeemployeelist::where('email','LIKE',"%{$key}%")->get();
+
+
+    //     return view('backend.layouts.search-officeemployee');
+    // }
 }

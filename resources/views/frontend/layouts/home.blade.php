@@ -1,16 +1,27 @@
 @extends('frontend.master')
 
 @section('contents')
-
+<li class="text-center">
+                <img src="frontend/images/banner-02.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br>Ayaat Transports Management</strong></h1>
+                            
+                        </div>
+                    </div>
+                </div>
+            </li>
 <div class="slider_wrapper ">
 				<div id="camera_wrap" class="">
-					<div data-src="frontend/images/slide.jpg" ></div>
+					<div data-src="frontend/images/slider-1.png" ></div>
+					<div data-src="frontend/images/slider-2.png" ></div>
 					<div data-src="frontend/images/slide2.jpg"></div>
 
 				</div>
 			</div>
-			<div class="container_12">
-				<div class="grid_10">
+			<div class="container_10">
+				<div class="grid_8">
 					<div class="banner">
 						<div class="maxheight">
 							<div class="banner_title">

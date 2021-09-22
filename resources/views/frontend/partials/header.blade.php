@@ -11,6 +11,7 @@
 								
 									
 									<li><a href="{{route('contact')}}">Contacts</a></li>
+									<li><a href="{{route('term')}}">Terms & Privacy</a></li>
 									
 									@if(auth()->user())
                         <li><a class="nav-item nav-link" href="{{route('officeemployee.logout')}}">Logout</a></li>
@@ -20,8 +21,10 @@
 						<li><a class="nav-item nav-link" href="{{route('user.signup')}}">Signup</a></li>
 
                             @endif
+
+							<li><a href="{{route('front.search')}}">Search</a></li>
 									
-                                    <li><a href="{{route('term')}}">Terms & Privacy</a></li>
+                                  
 
 								</ul>
 							</nav>

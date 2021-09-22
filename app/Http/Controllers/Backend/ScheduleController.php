@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Location;
-use App\Models\RegularTrip;
+
 use Illuminate\Http\Request;
 use App\Models\Schedule;
 use App\Models\Transport;
@@ -15,17 +15,22 @@ class ScheduleController extends Controller
 
     {     //variable=Model::relation name
         
-        $schedules = Schedule ::with(['regulartrip'])->get();
-        $regulartrips = RegularTrip:: all();
-
-        return view('backend.layouts.schedule.list', compact('schedules','regulartrips'));
+        $schedules=Schedule:: with(['locationFrom','locationTo'])->get();
+        $schedules=Schedule::with(['transport'])->get();
+       
+       $locations= Location::all();
+       $transports = Transport::all();
+       //dd($transports );
+      return view('backend.layouts.schedule.list', compact('schedules','transports', 'locations'));
     }
 
     public function create()
 
-    { 
-        $regulartrips = RegularTrip:: all();
-         return view('backend.layouts.schedule.create', compact('regulartrips'));
+    {   $schedules=Schedule::all();
+        $locations= Location::all();
+        $transports = Transport::all();
+        //dd($transports );
+       return view('backend.layouts.schedule.create', compact('schedules','transports', 'locations'));
     }
 
     public function delete($id)
@@ -43,7 +48,7 @@ class ScheduleController extends Controller
     public function edit($id)
     {
         $schedules = Schedule::find($id);
-        $regulartrips = RegularTrip:: all();
+        
         return view('backend.layouts.schedule.edit',compact('regulartrips','schedules'));
     }
 
@@ -52,9 +57,13 @@ class ScheduleController extends Controller
 //        dd($request->all());
        $schedules = Schedule::find($id);
        $schedules->update([
-        'regulartrip_id'=>$request->regulartrip_id,
+        'transport_id'=>$request->transport_id,
         'date'=>$request->date,
-        'time'=>$request->time,
+        'locationfrom'=>$request->locationfrom,
+          
+            'locationto'=>$request->locationto,
+        'pickuptime'=>$request->pickuptime,
+        'droptime'=>$request->droptime,
         
         
         ]);
@@ -67,9 +76,13 @@ class ScheduleController extends Controller
      { 
     //dd($request->all());
        Schedule::create([
-            'regulartrip_id'=>$request->regulartrip_id,
+            'transport_id'=>$request->transport_id,
             'date'=>$request->date,
-            'time'=>$request->time,
+            'locationfrom'=>$request->locationfrom,
+          
+            'locationto'=>$request->locationto,
+            'pickuptime'=>$request->pickuptime,
+            'droptime'=>$request->droptime,
           
             
  
@@ -78,9 +91,7 @@ class ScheduleController extends Controller
          return redirect()->route('schedule.list');
                  
      }
-     public function alltrips($id)
-     {
-        $regulartrips = RegularTrip::with(['locationFrom','locationTo','transport'])->find($id);
-           return view('backend.layouts.schedule.trip-view', compact('regulartrips'));
-     }
+     
+
+     
 }

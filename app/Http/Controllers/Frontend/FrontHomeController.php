@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
 
 
@@ -28,5 +29,17 @@ class FrontHomeController extends Controller
 
     {
       return view('frontend.layouts.termprivacy');
+    }
+    public function search()
+    {
+        // $_GET['key']
+        // request()->key
+
+        
+        $key=request()->search;
+        $schedules=Schedule::where('date','LIKE',"%{$key}%")->get();
+
+
+        return view('frontend.layouts.search-result',compact('schedules'));
     }
 }

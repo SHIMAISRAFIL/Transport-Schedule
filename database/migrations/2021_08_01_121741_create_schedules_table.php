@@ -15,9 +15,15 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('regulartrip_id');
-            $table->string('date', 100);
-            $table->string('time', 100);
+            $table->foreignId('transport_id');
+            
+            $table->string('date');
+            $table->string('locationfrom', 20);
+            $table->string('locationto', 20);
+            
+
+            $table->string('pickuptime')->nullable();
+            $table->string('droptime')->nullable();
           
         
            
