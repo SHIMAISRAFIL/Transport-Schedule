@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-26T19:13:20.369Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="PKCaqH6Xi_Iaf1pz8ST2" version="15.3.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-26T19:15:21.176Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="Y-p_5_tAqYp1Qyc1Agvg" version="15.3.4" type="github">
   <diagram id="m1V7zA7mebeq46YNh9Ek" name="Page-1">
     <mxGraphModel dx="1219" dy="672" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -147,6 +147,32 @@
         </mxCell>
         <mxCell id="PxbL5v5Bzp1MklqN0sMN-69" value="Can View Driver Info" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="479" y="360" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PxbL5v5Bzp1MklqN0sMN-72" value="" style="endArrow=classic;html=1;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;exitX=1;exitY=0.556;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="PxbL5v5Bzp1MklqN0sMN-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="479" y="555" as="sourcePoint" />
+            <mxPoint x="640" y="478" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="640" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PxbL5v5Bzp1MklqN0sMN-73" value="Add New Info" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="490" y="540" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="PxbL5v5Bzp1MklqN0sMN-74" value="" style="endArrow=classic;html=1;sourcePerimeterSpacing=8;targetPerimeterSpacing=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.622;entryY=1.059;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PxbL5v5Bzp1MklqN0sMN-11" target="PxbL5v5Bzp1MklqN0sMN-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="590" as="sourcePoint" />
+            <mxPoint x="450" y="540" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="755" />
+              <mxPoint x="560" y="650" />
+              <mxPoint x="682" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PxbL5v5Bzp1MklqN0sMN-75" value="Remove Info" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="480" y="730" width="80" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
