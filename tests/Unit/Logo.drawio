@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-09-30T12:55:25.184Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="lI7C8RBbP9e1I60OdOcW" version="15.3.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-30T12:57:22.458Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="I_EOIyyp4JLZXKfy2x-9" version="15.3.8" type="github">
   <diagram id="YphvDcToEx7Mw1fkcDue" name="Page-1">
-    <mxGraphModel dx="1550" dy="829" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="738" dy="395" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -22,22 +22,22 @@
         <mxCell id="vZsCfjT3-jncpjTAse-_-8" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#97D077;" vertex="1" parent="1">
           <mxGeometry x="650" y="480" width="150" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="vZsCfjT3-jncpjTAse-_-9" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="vZsCfjT3-jncpjTAse-_-9" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#0066CC;" vertex="1" parent="1">
           <mxGeometry x="660" y="490" width="130" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="vZsCfjT3-jncpjTAse-_-10" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="vZsCfjT3-jncpjTAse-_-10" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#0000FF;" vertex="1" parent="1">
           <mxGeometry x="670" y="500" width="110" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="vZsCfjT3-jncpjTAse-_-11" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="vZsCfjT3-jncpjTAse-_-11" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#CC0066;" vertex="1" parent="1">
           <mxGeometry x="675" y="510" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="vZsCfjT3-jncpjTAse-_-12" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="vZsCfjT3-jncpjTAse-_-12" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#FF0080;" vertex="1" parent="1">
           <mxGeometry x="690" y="520" width="70" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="vZsCfjT3-jncpjTAse-_-13" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="vZsCfjT3-jncpjTAse-_-13" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#666600;" vertex="1" parent="1">
           <mxGeometry x="695" y="525" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="vZsCfjT3-jncpjTAse-_-14" value="Cloud" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="vZsCfjT3-jncpjTAse-_-14" value="Ayaat" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;fillColor=#FF94E6;" vertex="1" parent="1">
           <mxGeometry x="703" y="530" width="45" height="30" as="geometry" />
         </mxCell>
       </root>
