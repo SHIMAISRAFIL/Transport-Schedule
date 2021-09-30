@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-09-30T12:41:19.625Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="ULUyPaw2TH0aTw8hMvTc" version="15.3.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-30T12:42:20.334Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="sbIKQRDF0Za4R5Tfjzb-" version="15.3.8" type="github">
   <diagram id="DJSuSVDZlaicqns8vHKC" name="Page-1">
-    <mxGraphModel dx="1069" dy="1399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1824" dy="1802" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#C7FFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -117,7 +117,7 @@
         <mxCell id="FF0qFtJ5_6zWRc0rYDPk-42" value="&lt;span style=&quot;color: rgb(255 , 0 , 0) ; text-align: left&quot;&gt;1.... *&amp;nbsp; Association&amp;nbsp; &amp;nbsp; &amp;nbsp; 1&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="400" y="-540" width="150" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="ONsWMpXN_HEURVspnK5K-1" value="Login" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+        <mxCell id="ONsWMpXN_HEURVspnK5K-1" value="Login" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="395" y="-460" width="160" height="170" as="geometry" />
         </mxCell>
         <mxCell id="ONsWMpXN_HEURVspnK5K-2" value="+Type&#xa;-Name&#xa;-Address&#xa;-Phone&#xa;-Email&#xa;-Create Password&#xa;#Confirm Password" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="ONsWMpXN_HEURVspnK5K-1">
@@ -145,13 +145,13 @@
         <mxCell id="ONsWMpXN_HEURVspnK5K-9" value="+Receipt&#xa;+Cost_Calculator&#xa;&#xa;+Enter_trip_distance()&#xa;+Enter_fuel_efficiency()&#xa;+Enter_fuel_price_litter()&#xa;-See_total_amount()" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="ONsWMpXN_HEURVspnK5K-7">
           <mxGeometry y="30" width="170" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="ONsWMpXN_HEURVspnK5K-10" value="Routine" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+        <mxCell id="ONsWMpXN_HEURVspnK5K-10" value="Routine" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="45" y="-240" width="160" height="180" as="geometry" />
         </mxCell>
         <mxCell id="ONsWMpXN_HEURVspnK5K-11" value="+Date&#xa;+Time&#xa;+Destination&#xa;+Bus or Micro No.&#xa;+Driver Name" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="ONsWMpXN_HEURVspnK5K-10">
           <mxGeometry y="30" width="160" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="ONsWMpXN_HEURVspnK5K-13" value="Appoint Driver" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+        <mxCell id="ONsWMpXN_HEURVspnK5K-13" value="Appoint Driver" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="745" y="-240" width="160" height="180" as="geometry" />
         </mxCell>
         <mxCell id="ONsWMpXN_HEURVspnK5K-15" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="ONsWMpXN_HEURVspnK5K-13">
