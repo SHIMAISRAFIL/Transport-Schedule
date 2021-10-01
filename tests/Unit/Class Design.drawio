@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-10-01T20:01:19.222Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="EKSMDqzt_f3VKJdmMjX8" version="15.3.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-01T20:04:29.584Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="k5E3FDUIlmsx7sezaCMh" version="15.3.8" type="github">
   <diagram id="DJSuSVDZlaicqns8vHKC" name="Page-1">
-    <mxGraphModel dx="1533" dy="1636" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#C7FFFF" math="0" shadow="0">
+    <mxGraphModel dx="1406" dy="1575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#C7FFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,7 +13,7 @@
             <mxPoint x="170" y="70" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="y1OyXAscInGBB207TFrI-2" value="-Email&#xa;#password&#xa;&#xa;+See_regular_routine()&#xa;+Req_for_urgent_trip()&#xa;-Get_acceptance_msg()&#xa;--Get_rejection_msg())" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="y1OyXAscInGBB207TFrI-1" vertex="1">
+        <mxCell id="y1OyXAscInGBB207TFrI-2" value="-Email&#xa;#password&#xa;&#xa;+See_regular_routine()&#xa;+Req_for_emergency_trip()&#xa;-Get_acceptance_msg()&#xa;--Get_rejection_msg())" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="y1OyXAscInGBB207TFrI-1" vertex="1">
           <mxGeometry y="30" width="170" height="150" as="geometry" />
         </mxCell>
         <mxCell id="y1OyXAscInGBB207TFrI-5" value="Admin" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;gradientDirection=radial;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
@@ -25,7 +25,7 @@
             <mxPoint x="160" y="70" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="y1OyXAscInGBB207TFrI-6" value="-Email&#xa;+password&#xa;&#xa;-Arrange_schedule()&#xa;-Get_request_message()&#xa;-Check_driver_availability()&#xa;-Manage_request_message()&#xa;-Inform_transport_user()&#xa;-Inform_driver()" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="y1OyXAscInGBB207TFrI-5" vertex="1">
+        <mxCell id="y1OyXAscInGBB207TFrI-6" value="-Email&#xa;+password&#xa;&#xa;-Arrange_schedule()&#xa;-Get_request_message()&#xa;-Check_driver_availability()&#xa;-Manage_request_message()&#xa;-Give_message about &#xa;emergency trip()&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="y1OyXAscInGBB207TFrI-5" vertex="1">
           <mxGeometry y="30" width="170" height="150" as="geometry" />
         </mxCell>
         <mxCell id="y1OyXAscInGBB207TFrI-13" value="Multiplicity" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#FF0000;gradientDirection=radial;" parent="1" vertex="1">
@@ -43,7 +43,7 @@
             <mxPoint x="160" y="70" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="y1OyXAscInGBB207TFrI-20" value="-Email&#xa;+password&#xa;&#xa;-Upload_own_info()&#xa;-Update_the_availability()&#xa;+Upload-if-in-leave()&#xa;+Upload_fuel_bill_receipt()&#xa;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="y1OyXAscInGBB207TFrI-18" vertex="1">
+        <mxCell id="y1OyXAscInGBB207TFrI-20" value="-Email&#xa;+password&#xa;&#xa;+See_regular_routine()&#xa;+Get_message_emergency&#xa;_trip()&#xa;+See_transport_info" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="y1OyXAscInGBB207TFrI-18" vertex="1">
           <mxGeometry y="30" width="170" height="150" as="geometry" />
         </mxCell>
         <mxCell id="y1OyXAscInGBB207TFrI-21" value="" style="endArrow=classic;html=1;fontColor=#FF0000;exitX=1.01;exitY=0.461;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.005;entryY=0.461;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
