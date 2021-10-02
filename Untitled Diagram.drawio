@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-08-15T17:23:02.166Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36" etag="5OVlV89vU3qUIkOcsB5D" version="14.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-26T22:29:12.928Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="GbWp50iffpLi7Uia2yGj" version="15.3.4" type="github">
   <diagram id="_Hke5c7gtm3ifdNGaI75" name="Page-1">
-    <mxGraphModel dx="451" dy="579" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F4F1DE" math="0" shadow="0">
+    <mxGraphModel dx="653" dy="816" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F4F1DE" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -37,13 +37,13 @@
             <mxPoint x="1541" y="40" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-11" value="Admin" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-11" value="Admin" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" parent="1" vertex="1">
           <mxGeometry x="840" y="603" width="70" height="27" as="geometry" />
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-12" value="Office Employee" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-12" value="Office Employee" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" parent="1" vertex="1">
           <mxGeometry x="1549" y="505" width="64" height="27" as="geometry" />
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-13" value="Driver" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-13" value="Driver" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" parent="1" vertex="1">
           <mxGeometry x="1546" y="700" width="64" height="27" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-15" value="" style="endArrow=none;html=1;entryX=0.854;entryY=1.012;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" source="LA62-pf56U3Ix_v_cgrx-16" target="LA62-pf56U3Ix_v_cgrx-13" edge="1">
@@ -67,7 +67,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-18" value="Login" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-18" value="Login" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="1140" y="40" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-19" value="Register" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
@@ -118,56 +118,20 @@
             <mxPoint x="1450" y="130" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-42" value="" style="endArrow=none;html=1;entryX=0.001;entryY=0.237;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" target="LA62-pf56U3Ix_v_cgrx-43" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="885" y="600" as="sourcePoint" />
-            <mxPoint x="985" y="100" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="895" y="119" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-43" value="Manage Regular Trip" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
-          <mxGeometry x="980" y="110" width="90" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-44" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" target="LA62-pf56U3Ix_v_cgrx-45" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="889.9999999999998" y="600" as="sourcePoint" />
             <mxPoint x="970" y="160" as="targetPoint" />
             <Array as="points">
               <mxPoint x="900" y="340" />
-              <mxPoint x="900" y="225" />
+              <mxPoint x="900" y="176" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-45" value="Arrange Schedule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
-          <mxGeometry x="980" y="205" width="90" height="40" as="geometry" />
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-45" value="Arrange Schedule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="978" y="156" width="90" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-46" value="Trip Info" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
-          <mxGeometry x="1120" y="100" width="90" height="25" as="geometry" />
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-47" value="Update Trip Info" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
-          <mxGeometry x="1115" y="150" width="100" height="25" as="geometry" />
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-50" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" source="LA62-pf56U3Ix_v_cgrx-43" target="LA62-pf56U3Ix_v_cgrx-46" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1070" y="100" as="sourcePoint" />
-            <mxPoint x="1120" y="100" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-51" value="Include" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="LA62-pf56U3Ix_v_cgrx-50" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-55" value="" style="endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" target="LA62-pf56U3Ix_v_cgrx-43" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1110" y="160" as="sourcePoint" />
-            <mxPoint x="1060" y="110" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-56" value="Extend" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="LA62-pf56U3Ix_v_cgrx-55" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-57" value="See Office Employee List" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-57" value="See Office Employee List" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="980" y="280" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-58" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" target="LA62-pf56U3Ix_v_cgrx-57" edge="1">
@@ -208,14 +172,14 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-62" value="Create Schedule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
-          <mxGeometry x="1140" y="187.5" width="100" height="25" as="geometry" />
+          <mxGeometry x="1135" y="160" width="100" height="25" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-63" value="Delete Schedule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
-          <mxGeometry x="1125" y="240" width="100" height="25" as="geometry" />
+          <mxGeometry x="1138" y="202" width="100" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-66" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.016;exitY=0.285;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" source="LA62-pf56U3Ix_v_cgrx-45" target="LA62-pf56U3Ix_v_cgrx-62" edge="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-66" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" target="LA62-pf56U3Ix_v_cgrx-62" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1070" y="170" as="sourcePoint" />
+            <mxPoint x="1069" y="176" as="sourcePoint" />
             <mxPoint x="1170" y="170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -246,7 +210,7 @@
         <mxCell id="LA62-pf56U3Ix_v_cgrx-73" value="Include" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="LA62-pf56U3Ix_v_cgrx-72" connectable="0" vertex="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-75" value="Appoint New Driver" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-75" value="Appoint New Driver" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="980" y="360" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-76" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" target="LA62-pf56U3Ix_v_cgrx-75" edge="1">
@@ -279,7 +243,7 @@
         <mxCell id="LA62-pf56U3Ix_v_cgrx-81" value="Extend" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="LA62-pf56U3Ix_v_cgrx-80" connectable="0" vertex="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-82" value="Manage Driver &amp;amp; Transport" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-82" value="Manage Transport" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="980" y="430" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-83" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" target="LA62-pf56U3Ix_v_cgrx-82" edge="1">
@@ -291,7 +255,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-84" value="Driver &amp;amp; Transport Info" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-84" value="&amp;nbsp;Transport Info" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
           <mxGeometry x="1120" y="430" width="120" height="35" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-85" value="" style="endArrow=classic;html=1;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" edge="1">
@@ -309,7 +273,7 @@
             <mxPoint x="980" y="560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-90" value="See Request for Urgent Trip" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-90" value="See Request for Urgent Trip" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="975" y="515" width="100" height="45" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-91" value="Urgent Trip Info" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
@@ -342,7 +306,7 @@
             <mxPoint x="973" y="629" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-99" value="Check Driver Availability" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-99" value="Check Driver Availability" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="975" y="610" width="100" height="45" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-100" value="Driver &amp;amp; Transport Info" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
@@ -363,7 +327,7 @@
             <mxPoint x="970" y="670" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-105" value="Message To Office Employee" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-105" value="Message To Office Employee" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="975" y="665" width="100" height="45" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-106" value="Accept" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
@@ -399,14 +363,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-113" value="Fuel Cost Calculation" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-113" value="Fuel Cost Calculation" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="970" y="730" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-114" value="Daily Basis" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-114" value="Weekly Basis" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
           <mxGeometry x="1130" y="740" width="120" height="35" as="geometry" />
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-115" value="Urgent Trip Basis" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
-          <mxGeometry x="1130" y="785" width="120" height="35" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-116" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" source="LA62-pf56U3Ix_v_cgrx-113" target="LA62-pf56U3Ix_v_cgrx-114" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -417,27 +378,6 @@
         <mxCell id="LA62-pf56U3Ix_v_cgrx-117" value="Include" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="LA62-pf56U3Ix_v_cgrx-116" connectable="0" vertex="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-118" value="" style="endArrow=classic;html=1;entryX=0.94;entryY=0.778;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" source="LA62-pf56U3Ix_v_cgrx-115" target="LA62-pf56U3Ix_v_cgrx-113" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1090" y="816.91" as="sourcePoint" />
-            <mxPoint x="1190" y="816.91" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-119" value="Extend" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="LA62-pf56U3Ix_v_cgrx-118" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-120" value="See The Review" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
-          <mxGeometry x="970" y="790" width="100" height="25" as="geometry" />
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-121" value="" style="endArrow=none;html=1;exitX=0.857;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" source="LA62-pf56U3Ix_v_cgrx-11" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="910.4999999999995" y="735" as="sourcePoint" />
-            <mxPoint x="971" y="800" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="900" y="800" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-123" value="" style="endArrow=none;html=1;exitX=0.857;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" target="LA62-pf56U3Ix_v_cgrx-124" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="860" y="630" as="sourcePoint" />
@@ -447,7 +387,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-124" value="Generate Reports" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-124" value="Generate Reports" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="975" y="825" width="100" height="25" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-125" value="" style="endArrow=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" target="LA62-pf56U3Ix_v_cgrx-126" edge="1">
@@ -459,7 +399,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-126" value="See Schedule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-126" value="See Schedule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="1390" y="180" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-127" value="Time" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
@@ -491,12 +431,12 @@
             <mxPoint x="1574" y="505" as="sourcePoint" />
             <mxPoint x="1465" y="265" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1572" y="265" />
+              <mxPoint x="1572" y="280" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-134" value="Request For Urgent Trip" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
-          <mxGeometry x="1390" y="245" width="90" height="40" as="geometry" />
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-134" value="Request For Urgent Trip" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1410" y="260" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-137" value="Time" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
           <mxGeometry x="1270" y="255" width="60" height="30" as="geometry" />
@@ -504,7 +444,7 @@
         <mxCell id="LA62-pf56U3Ix_v_cgrx-138" value="Location" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
           <mxGeometry x="1270" y="300" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-139" value="" style="endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.058;exitY=0.885;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" source="LA62-pf56U3Ix_v_cgrx-134" target="LA62-pf56U3Ix_v_cgrx-137" edge="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-139" value="" style="endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" source="LA62-pf56U3Ix_v_cgrx-134" target="LA62-pf56U3Ix_v_cgrx-137" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1399" y="309" as="sourcePoint" />
             <mxPoint x="1420" y="311.25" as="targetPoint" />
@@ -522,17 +462,17 @@
         <mxCell id="LA62-pf56U3Ix_v_cgrx-142" value="Include" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="LA62-pf56U3Ix_v_cgrx-141" connectable="0" vertex="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-147" value="" style="endArrow=none;html=1;exitX=0.148;exitY=-0.057;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" edge="1">
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-147" value="" style="endArrow=none;html=1;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1555.472" y="503.4609999999999" as="sourcePoint" />
-            <mxPoint x="1527" y="360" as="targetPoint" />
+            <mxPoint x="1562" y="503" as="sourcePoint" />
+            <mxPoint x="1534" y="391.54" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1555" y="360" />
+              <mxPoint x="1562" y="391.54" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-148" value="Get Massage About Urgent Trip" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
-          <mxGeometry x="1400" y="342.5" width="130" height="40" as="geometry" />
+        <mxCell id="LA62-pf56U3Ix_v_cgrx-148" value="Get Massage About Urgent Trip" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1404" y="375" width="130" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LA62-pf56U3Ix_v_cgrx-149" value="Accept" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
           <mxGeometry x="1270" y="342.5" width="80" height="27.5" as="geometry" />
@@ -558,22 +498,13 @@
         <mxCell id="LA62-pf56U3Ix_v_cgrx-154" value="Extend" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="LA62-pf56U3Ix_v_cgrx-153" connectable="0" vertex="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-155" value="" style="endArrow=none;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" source="LA62-pf56U3Ix_v_cgrx-12" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1340" y="400" as="sourcePoint" />
-            <mxPoint x="1500" y="460" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="LA62-pf56U3Ix_v_cgrx-156" value="Give Review About Service" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
-          <mxGeometry x="1370" y="440" width="130" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="LdRblt9bTyRINUKM_sTW-1" value="" style="endArrow=none;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;strokeColor=#E07A5F;fontColor=#393C56;labelBackgroundColor=#F4F1DE;" parent="1" source="LA62-pf56U3Ix_v_cgrx-13" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1210" y="720" as="sourcePoint" />
             <mxPoint x="1510" y="560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LdRblt9bTyRINUKM_sTW-2" value="Get Regular Trip Info" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LdRblt9bTyRINUKM_sTW-2" value="Get Regular Trip Info" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="1400" y="535" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LdRblt9bTyRINUKM_sTW-3" value="Time" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
@@ -618,7 +549,7 @@
             <mxPoint x="1500" y="720" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LdRblt9bTyRINUKM_sTW-13" value="Get The Transport" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LdRblt9bTyRINUKM_sTW-13" value="Get The Transport" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="1430" y="700" width="70" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LdRblt9bTyRINUKM_sTW-14" value="Transport Number" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
@@ -651,7 +582,7 @@
             <mxPoint x="1520" y="800" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LdRblt9bTyRINUKM_sTW-21" value="Get Notification it any Urgent Trip" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
+        <mxCell id="LdRblt9bTyRINUKM_sTW-21" value="Get Notification it any Urgent Trip" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="1430" y="760" width="90" height="65" as="geometry" />
         </mxCell>
         <mxCell id="LdRblt9bTyRINUKM_sTW-22" value="Time" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" parent="1" vertex="1">
