@@ -57,7 +57,7 @@
   
   <label for="droptime">DropTime</label>
 
-  <input class="form-control" type="time" name="time" id="time" placeholder="Enter Time">
+  <input class="form-control" type="time" name="droptime" id="droptime" placeholder="Enter Time">
 
 </div>
 

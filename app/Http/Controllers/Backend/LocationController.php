@@ -23,7 +23,17 @@ class LocationController extends Controller
          return view('backend.layouts.location.create');
     }
 
-   
+    public function store(Request $request) 
+    { 
+   //dd($request->all());
+           Location::create([
+           
+           'location'=>$request->location,
+        ]);
+
+        return redirect()->route('location.list');
+                
+    }
    
     public function delete($id)
     {
@@ -36,9 +46,7 @@ class LocationController extends Controller
         }
         return redirect()->back()->with('message','Nothing found to delete.');
     }
-
-
-
+    
     public function edit($id)
     {
       
@@ -63,17 +71,5 @@ class LocationController extends Controller
         return redirect()->route('location.list')->with('message','Location updated successfully.');
     }
 
-    public function store(Request $request)
-     { 
-    //dd($request->all());
-            Location::create([
-            
-            'location'=>$request->location,
-           
- 
-         ]);
- 
-         return redirect()->route('location.list');
-                 
-     }
+    
 }

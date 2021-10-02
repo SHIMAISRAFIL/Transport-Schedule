@@ -1,18 +1,36 @@
-@extends('frontend.master')
-
-@section('contents')
-
-<form action="{{route('user.signup.store')}}" type="form" method="Post" style="border:1px solid #ccc">
 
 
-@csrf 
 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords"
+          content="">
+    <meta name="author" content="leamug">
+    <title> Login Form </title>
+    <link href="css/style.css" rel="stylesheet" id="style">
+    
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <!-- Font Awesome-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
 <body>
+    
 <style type="text/css">body {
   background-image:url("Frontend/images/userLoginImage.jpg");
   background-position:center;
   background-size:cover;
-  background-repeat: no-repeat;
   
   -webkit-font-smoothing: antialiased;
   font: normal 14px Roboto,arial,sans-serif;
@@ -67,15 +85,16 @@ h4 {
     font-size: 25px;
 }</style>
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<!-- Page Content -->
 
-<div style="background-color:#41aaa2; height:400px; width:400px; border-radius:30px; text-align:center;" class="col-md-offset-4">
-<h1 style="text-align:center; padding-top:30px; color:#ffffff;">Sign Up</h1>
 
-@if(session()->has('success'))
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-4 text-center">
+
+        <h1 class='text-white'> Signup Form</h1>
+            @if(session()->has('success'))
                 <div class="alert alert-success">
                     {{ session()->get('success') }}
                 </div>
@@ -92,40 +111,38 @@ h4 {
                 @endif
 
 <form action="{{route('user.signup.store')}}" type="form" method="Post">
-<p>Please fill in this form to create an account.</p>
-
 @csrf
+<p>Please fill in this form to create an account.</p>
+            <div class="form-login"></br>
+                <h4>Give Required Information</h4>
+                </br>
 
+                <input required type="text" class="form-control" id="name" placeholder="Enter Name" name="name" style="border-radius:15px;">
+                </br></br>
+                <input required type="email" class="form-control" id="email" placeholder="Enter email" name="email" style="border-radius:15px;">
+                </br></br>
+                <input required type="text" class="form-control" id="address" placeholder="Enter Address" name="address" style="border-radius:15px;">
+                </br></br>
+                <input required type="text" class="form-control" id="phone" placeholder="Enter Mobile No." name="phone" style="border-radius:15px;">
+                </br></br>
+                <input required type="password" class="form-control" id="password" placeholder="Password" name="password" style="border-radius:15px;">
+                </br></br>
+                
+                            <p>By creating an account you agree to our  <a href="{{route('term')}}" style="color:red">Terms & Privacy</a>.</p>
 
-<div class="col-sm-12" style="padding-top:10px;">
-<input required type="text" class="form-control" id="name" placeholder="Enter Name" name="name" style="border-radius:15px;">
+<div class="clearfix">
+  <button type="button" class="btn btn-primary btn-md">Cancel</button>
+  <button type="submit" class="btn btn-primary btn-md">Sign Up</button>
 </div>
 
-<div class="col-sm-12" style="padding-top:10px;">
-<input required type="email" class="form-control" id="email" placeholder="Enter email" name="email" style="border-radius:15px;">
-</div>
-
-<div class="col-sm-12" style="padding-top:10px;">
-<input required type="text" class="form-control" id="address" placeholder="Enter Address" name="address" style="border-radius:15px;">
-</div>
-
-<div class="col-sm-12" style="padding-top:10px;">
-<input required type="text" class="form-control" id="phone" placeholder="Enter Mobile No." name="phone" style="border-radius:15px;">
-</div>
-<div class="col-sm-12" style="padding-top:10px;">
-<input required type="password" class="form-control" id="password" placeholder="Password" name="password" style="border-radius:15px;">
-</div>
-<br></br>
-<p>By creating an account you agree to our  <a href="{{route('term')}}" style="color:dodgerred">Terms & Privacy</a>.</p>
-
-    <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+        </form>
+        </div>
     </div>
+    </br></br></br>
+    <!--footer-->
+    <div class="footer text-white text-center">
+     
+    </div>
+   
 
-</body>
-</form>
 
-
-
-@endsection

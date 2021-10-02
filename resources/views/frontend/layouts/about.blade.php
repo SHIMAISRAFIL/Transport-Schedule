@@ -4,7 +4,7 @@
 
 
 <!--==============================Content=================================-->
-<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - April 07, 2014!</div>
+
 				<div class="container_12">
 					<div class="grid_7">
 						<h3>A Few Words About Us</h3>
@@ -13,8 +13,7 @@
 							<div class="text1 color2">
 								<a href="#">Lorem ipsum dolor sit amet, consecteturpiscinger elit. </a>
 							</div>
-							<p>Want to know more about the free theme produced by TemplateMonster? Click this <span class="color1"><a href="http://blog.templatemonster.com/free-website-templates/" rel="dofollow">link</a></span>.</p>
-							One theme is not enough for you to make a choice? Browse the vast variety of <span class="color1"><a href="http://www.templatemonster.com/properties/topic/society-people/" rel="nofollow">car templates</a></span> at TemplateMonster’s website.
+							
 						</div>
 						<div class="clear cl1"></div>
 						<p>Cras er te facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuad nibh odio ut veliter loki molo. Vivamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum atermolok commodo luctus erito libero.</p>

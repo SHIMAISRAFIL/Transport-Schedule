@@ -13,7 +13,7 @@ class DriverController extends Controller
     public function list()
 
     { 
-    
+       
         $drivers =Driver::all();
        
         return view('backend.layouts.driver.list',compact('drivers'));
@@ -31,7 +31,9 @@ class DriverController extends Controller
     {
 
       $drivers=Driver::find($id);
-        if($drivers)
+      
+      
+      if($drivers)
         {
             $drivers->delete();
             return redirect()->back()->with('message','Driver Deleted successfully.');
@@ -60,7 +62,7 @@ class DriverController extends Controller
             'license'=>$request->license,
             'experience'=>$request->experience,
             'phone'=>$request->phone,
-            'password'=>$request->password,
+           
         
         ]);
 
@@ -69,11 +71,11 @@ class DriverController extends Controller
 
     public function store(Request $request)
     { 
-        //dd($request->all());
+       
         Driver::create([
         
             'name'=>$request->name,
-           
+            'role'=>'driver',
             'email'=>$request->email,
             'age'=>$request->age,
             
@@ -81,19 +83,15 @@ class DriverController extends Controller
             'license'=>$request->license,
             'experience'=>$request->experience,
             'phone'=>$request->phone,
-            'password'=>$request->password,
+            'password'=>bcrypt($request->password),
             
  
          ]);
  
-         return redirect()->route('driver.list');
+         return redirect()->route('admin.driver.list');
                  
     }
 
 
-    public function allTransport($id)
-    {
-          $transports=Transport::where('driver_id',$id)->get();
-          return view('backend.layouts.driver.transport-list', compact('transports'));
-    }
+    
 }

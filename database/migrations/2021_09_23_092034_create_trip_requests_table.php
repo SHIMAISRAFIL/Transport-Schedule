@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRegularTripsTable extends Migration
+class CreateTripRequestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateRegularTripsTable extends Migration
      */
     public function up()
     {
-        Schema::create('regular_trips', function (Blueprint $table) {
+        Schema::create('trip_requests', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('transport_id');
+            $table->foreignId('driver_id')->nullable();
+            $table->foreignId('transport_id')->nullable();
+            $table->string('time')->nullable();
+            $table->string('location')->nullable();
+            $table->string('status')->nullable();
             
-         
-            $table->string('locationfrom', 20);
-            $table->string('locationto', 20);
-           
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class CreateRegularTripsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('regular_trips');
+        Schema::dropIfExists('trip_requests');
     }
 }

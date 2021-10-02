@@ -20,29 +20,32 @@ class BackendUserController extends Controller
         $credentials=$request->except('_token');
        
         if(Auth::attempt( $credentials))
-      
         {
-            if(auth()->user()->role=='admin' || auth()->user()->role=='officeemployee' || auth()->user()->role=='driver')
-            {
+             if(auth()->user()->role=='admin' || auth()->user()->role=='officeemployee' || auth()->user()->role=='driver' )
+           
+             {
                 return redirect()->route('dashboard');
-            }else
+            }
+            
+            else
+            
             {
                 Auth::logout();
                 return redirect()->route('user.signup');
             }
+        }
 
         return redirect()->back()->with('message','invalid user info.');
-    }
+  
 }
-    
-
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('admin.login');
+        return redirect()->route('fronthome');
     }
 
     public function officeemployeelist()
+
     {   $user= User::where('role','=','officeemployee')->get();
         return view('backend.layouts.officeemployee', compact('user'));
     }
@@ -52,14 +55,14 @@ class BackendUserController extends Controller
         return view('backend.layouts.user', compact('user'));
     }
 
-    // public function search()
-    // {
-    //     // $_GET['key']
-    //     // request()->key
-    //     $key=request()->search;
-    //     $officeemployees=officeemployeelist::where('email','LIKE',"%{$key}%")->get();
+    public function officeemployeesearch()
+    {
+        // $_GET['key']
+        // request()->key
+        $key=request()->search;
+        $user=User::where('name','LIKE',"%{$key}%")->get();
 
 
-    //     return view('backend.layouts.search-officeemployee');
-    // }
+        return view('backend.layouts.search-officeemployee', compact('user'));
+    }
 }

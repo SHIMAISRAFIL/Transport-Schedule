@@ -1,11 +1,34 @@
 @extends('frontend.master')
 
 @section('contents')
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords"
+          content="">
+    <meta name="author" content="leamug">
+    <title> Login Form </title>
+    <link href="css/style.css" rel="stylesheet" id="style">
+    
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <!-- Font Awesome-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
 <body>
+    
 <style type="text/css">body {
-  background-image:url('https://media.istockphoto.com/photos/long-row-of-bright-yellow-school-buses-parked-in-high-school-parking-picture-id1090730818?s=612x612');
+  background-image:url('https://taxreply.com/images/taxreply-181.jpg');
   background-position:center;
   background-size:cover;
   
@@ -62,54 +85,49 @@ h4 {
     font-size: 25px;
 }</style>
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-@if(session()->has('success'))
-                <div class="alert alert-success">
-                    {{ session()->get('success') }}
-                </div>
+<!-- Page Content -->
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-4 text-center">
+
+            <h1 class='text-white'> Login Form</h1>
+            @if(session()->has('message'))
+                <span class="alert alert-danger">{{session()->get('message')}}</span>
             @endif
+            
+        <form action="{{route('officeemployee.login.store')}}" method="post">    
+            @csrf
+            <div class="form-login"></br>
+                <h4>Secure Login</h4>
+                </br>
 
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
+                <input type="email" name="email" id="email" class="form-control input-sm chat-input" placeholder="email"/>
+                </br></br>
+                <input type="password" name="password" id="password" class="form-control input-sm chat-input" placeholder="password"/>
+                </br></br>
+                <div class="row align-items-center remember">
+                        <input type="checkbox">Remember Me
                     </div>
-                @endif
-
-<form action="{{route('officeemployee.login.store')}}" method="post">
-    @csrf
-<div style="background-color:#41aaa2; height:400px; width:400px; border-radius:30px; text-align:center;" class="col-md-offset-4">
-<h1 style="text-align:center; padding-top:30px; color:#ffffff;"></h1>
-<p>Please fill in this form to Login.</p>
-
-
-
-<div class="col-sm-12" style="padding-top:10px;">
-<input  type="email" class="form-control" id="email" placeholder="Enter email" name="email" style="border-radius:15px;">
-</div>
-
-
-
-<div class="col-sm-12" style="padding-top:10px;">
-<input type="password" class="form-control" id="password" placeholder=" Password" name="password" style="border-radius:15px;">
-</div>
-
-<div class="col-sm-12"  style="padding-top:10px;" >
-<input type="checkbox">Remember Me
- </div>
-
-    <div class="clearfix">
-     
-      <button type="submit" class="signupbtn">Login</button>
+                <div class="wrapper">
+                        <span class="group-btn">
+                            <input type="submit" value="Login" class="btn btn-danger btn-md"> <i class="fa fa-sign-in"></i></a>
+                        </span>
+                </div>
+                <a href="{{route('user.signup')}}" class="btn btn-primary">Create New Account</a>
+            </div>
+        </form>
+        </div>
     </div>
-</form>
-</body>
+    </br></br></br>
+    <!--footer-->
+    <div class="footer text-white text-center">
+     
+    </div>
+    <!--//footer-->
+</div>
 
 
 

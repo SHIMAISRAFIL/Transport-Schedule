@@ -1,3 +1,6 @@
+@extends('frontend.master')
+
+@section('contents')
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -25,7 +28,7 @@
 <body>
     
 <style type="text/css">body {
-  background-image:url('https://gogocharters.com/img_new_design/gbus.png');
+  background-image:url('https://taxreply.com/images/taxreply-181.jpg');
   background-position:center;
   background-size:cover;
   
@@ -51,12 +54,12 @@
     border-radius: 15px;
     border-color:#d2d2d2;
     border-width: 5px;
-    color:black;
+    color:white;
     box-shadow:0 1px 0 #cfcfcf;
 }
 .form-control{
     background:transparent!important;
-    color:b!important;
+    color:white!important;
     font-size: 20px!important;
 }
 h1{
@@ -90,12 +93,12 @@ h4 {
     <div class="row">
         <div class="col-md-offset-5 col-md-4 text-center">
 
-            <h1 class='text-Blue'> Login Form</h1>
+            <h1 class='text-white'> Login Form</h1>
             @if(session()->has('message'))
                 <span class="alert alert-danger">{{session()->get('message')}}</span>
             @endif
             
-        <form action="{{route('admin.login.store')}}" method="post">    
+        <form action="{{route('driver.login.store')}}" method="post">    
             @csrf
             <div class="form-login"></br>
                 <h4>Secure Login</h4>
@@ -125,7 +128,8 @@ h4 {
     </div>
     <!--//footer-->
 </div>
-</body>
-</html>
 
 
+
+
+@endsection

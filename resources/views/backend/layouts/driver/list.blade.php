@@ -18,7 +18,7 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Driver Name</th>
-    
+      <th scope="col">Role</th>
       <th scope="col">Email Address</th>
       <th scope="col">Address</th>
       <th scope="col">Age</th>
@@ -37,7 +37,7 @@
       <th scope="row">{{$key+1}}
       
       <td>{{$driver->name}}</td>
-     
+      <td>{{$driver->role}}</td>
       <td>{{$driver->email}}</td>
       <td>{{$driver->address}}</td>
       <td>{{$driver->age}}</td>

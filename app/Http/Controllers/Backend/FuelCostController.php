@@ -16,28 +16,13 @@ class FuelCostController extends Controller
         return view('backend.layouts.fuelcost.list', compact('fuelcosts','transports'));
     }
 
-   
     public function create()
 
-    {
-        $transports=Transport::all();
+    {  $transports=Transport::all();
         
         return view('backend.layouts.fuelcost.create',compact('transports'));
-
-    }
-    public function delete($id)
-    {
-
-        $fuelcosts=FuelCost::find($id);
-        if($fuelcosts)
-        {
-            $fuelcosts->delete();
-            return redirect()->back()->with('message',' Deleted successfully.');
-        }
-        return redirect()->back()->with('message','Nothing found to delete.');
     }
 
-    
     public function store(Request $request)
     { 
         //dd($request->all());
@@ -51,7 +36,6 @@ class FuelCostController extends Controller
             'place'=>$request->place,
             'remarks'=>$request->remarks,
             
-            
  
          ]);
  
@@ -59,7 +43,19 @@ class FuelCostController extends Controller
                  
     }
 
+
+    public function delete($id)
+    {  $fuelcosts=FuelCost::find($id);
+        if($fuelcosts)
+        {
+            $fuelcosts->delete();
+            return redirect()->back()->with('message',' Deleted successfully.');
+        }
+        return redirect()->back()->with('message','Nothing found to delete.');
+    }
+    
      public function edit($id)
+     
      {  $fuelcosts=FuelCost::find($id);
         //dd($fuelcosts);
         $transports=Transport::all();

@@ -11,11 +11,13 @@ use Illuminate\Http\Request;
 class FrontHomeController extends Controller
 {
     public function fronthome()
+
     {
       return view('frontend.layouts.home');
     }
 
     public function about()
+
     {
       return view('frontend.layouts.about');
     }
@@ -25,21 +27,12 @@ class FrontHomeController extends Controller
     {
       return view('frontend.layouts.contact');
     }
+
+    
     public function term()
 
     {
       return view('frontend.layouts.termprivacy');
     }
-    public function search()
-    {
-        // $_GET['key']
-        // request()->key
-
-        
-        $key=request()->search;
-        $schedules=Schedule::where('date','LIKE',"%{$key}%")->get();
-
-
-        return view('frontend.layouts.search-result',compact('schedules'));
-    }
+    
 }

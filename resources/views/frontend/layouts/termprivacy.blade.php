@@ -110,7 +110,7 @@ All Materials, Services, Accounts, and content, including, but not limited to, p
 Please see our <a href="privacy-policy.html">Privacy Policy</a> as set forth on the site.
 
 <h2>About These Terms</h2>
-<p>These Terms and Conditions are just a sample and are not legally binding. Real Terms of Services do not (usually) contain vegetables...</p>
+<p>These Terms and Conditions are just a sample and are not legally binding. </p>
 
 
                     

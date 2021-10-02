@@ -13,7 +13,7 @@
             <th scope="col">User Name</th>
             <th scope="col">Email</th>
             
-            <th scope="col">Action</th>
+            <th scope="col">Staus</th>
         </tr>
         </thead>
         <tbody>
@@ -25,7 +25,7 @@
             <td>{{$data->name}}</td>
             <td>{{$data->email}}</td>
             
-            <td>   <a href="" class="btn btn-success">View</a></td>
+            <td>   <a href="">Succesfully Login</a></td>
         </tr>
 @endforeach
 </tbody>

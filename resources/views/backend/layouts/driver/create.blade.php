@@ -13,6 +13,11 @@
 
     <input name="name" type="text" class="form-control" id="name"  placeholder="Enter Name"></div>
     
+    <div class="form-group">
+    <label for="role">Role</label>
+
+<input value="driver" name="role" type="text" class="form-control" id="role"  placeholder="driver"></div>
+
  
     
     <div class="form-group">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Driver;
 use App\Models\Location;
 
 use Illuminate\Http\Request;
@@ -17,7 +18,7 @@ class ScheduleController extends Controller
         
         $schedules=Schedule:: with(['locationFrom','locationTo'])->get();
         $schedules=Schedule::with(['transport'])->get();
-       
+        // $drivers=Driver::all();
        $locations= Location::all();
        $transports = Transport::all();
        //dd($transports );
@@ -29,8 +30,26 @@ class ScheduleController extends Controller
     {   $schedules=Schedule::all();
         $locations= Location::all();
         $transports = Transport::all();
-        //dd($transports );
+        
        return view('backend.layouts.schedule.create', compact('schedules','transports', 'locations'));
+    }
+
+    public function store(Request $request)
+    { 
+   //dd($request->all());
+      Schedule::create([
+           
+           'transport_id'=>$request->transport_id,
+           'date'=>$request->date,
+           'locationfrom'=>$request->locationfrom,
+           'locationto'=>$request->locationto,
+           'pickuptime'=>$request->pickuptime,
+           'droptime'=>$request->droptime,  
+
+        ]);
+
+        return redirect()->route('schedule.list');
+                
     }
 
     public function delete($id)
@@ -48,20 +67,22 @@ class ScheduleController extends Controller
     public function edit($id)
     {
         $schedules = Schedule::find($id);
-        
-        return view('backend.layouts.schedule.edit',compact('regulartrips','schedules'));
+       
+        $transports = Transport::all();
+        $locations= Location::all();
+
+        return view('backend.layouts.schedule.edit',compact('schedules','transports', 'locations'));
     }
 
     public function update(Request $request,$id)
     {
 //        dd($request->all());
-       $schedules = Schedule::find($id);
-       $schedules->update([
+        $schedules = Schedule::find($id);
+        $schedules->update([
         'transport_id'=>$request->transport_id,
         'date'=>$request->date,
         'locationfrom'=>$request->locationfrom,
-          
-            'locationto'=>$request->locationto,
+        'locationto'=>$request->locationto,
         'pickuptime'=>$request->pickuptime,
         'droptime'=>$request->droptime,
         
@@ -70,28 +91,19 @@ class ScheduleController extends Controller
 
         return redirect()->route('schedule.list')->with('message','Schedule updated successfully.');
     }
-    
-    
-    public function store(Request $request)
-     { 
-    //dd($request->all());
-       Schedule::create([
-            'transport_id'=>$request->transport_id,
-            'date'=>$request->date,
-            'locationfrom'=>$request->locationfrom,
-          
-            'locationto'=>$request->locationto,
-            'pickuptime'=>$request->pickuptime,
-            'droptime'=>$request->droptime,
-          
-            
- 
-         ]);
- 
-         return redirect()->route('schedule.list');
-                 
-     }
+        
+public function schedulesearch()
+    {
+        // $_GET['key']
+        // request()->key
+        $key=request()->search;
+        
+        $schedules=Schedule::where('date','LIKE',"%{$key}%")->get();
+
+
+        return view('backend.layouts.schedule.search-schedule', compact('schedules'));
+    }
+}
+  
      
 
-     
-}

@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
+
 {
     public function signupform()
 
@@ -26,10 +27,13 @@ class UserController extends Controller
             'address'=>'required',
            
             'phone'=>'required',
-             'password'=>'required|min:6',
+            'password'=>'required|min:6',
 
         ]);
+
+
        User::create([
+
             'role'=>'officeemployee',
             'name'=>$request->name,
             'email'=>$request->email,
@@ -40,10 +44,13 @@ class UserController extends Controller
             
  
          ]);
+
+         
  
          return redirect()->back()->with('success','User Registration Successful.');;
-                 
-     }
+     
+        }       
+     
      public function login()
 
      { 
@@ -52,24 +59,56 @@ class UserController extends Controller
      }
  
      public function loginstore(Request $request)
-       {
-        //    dd($request->all());
-             $credentials=$request->except('_token');
-    // dd(Auth::attempt($credentials));
-             if(Auth::attempt($credentials))
-             {
-                 return redirect()->route('fronthome');
-                
-             }
-             return redirect()->back()->with('message','invalid user info.');
-         }
+     {
+        $credentials=$request->except('_token');
+        
+
+        if(Auth::attempt($credentials))
+        
+            {
+                return redirect()->route('dashboard');
+            
+            }
+            return redirect()->back()->with('message','invalid user info.');
+    }
      
          public function logout()
          {
+            
              Auth::logout();
              return redirect()->route('officeemployee.login');
          }
          
+
+         public function Driverlogin()
+
+         { 
+     
+             return view('backend.layouts.driver.login');
+         }
+     
+         public function Driverloginstore(Request $request)
+            {
+               
+                $credentials=$request->except('_token');
+
+                if(Auth::guard('driver')->attempt($credentials))
+                {
+                    
+                    return redirect()->route('driver.dashboard')->with('message','Login success.');
+                            
+                }
+                    return redirect()->back()->with('message','invalid user info.');
+            }
+         
+             public function Driverlogout()
+    
+             { 
+               
+                 Auth::guard('driver')->logout();
+                 return redirect()->route('fronthome');
+             }
+             
      }
 
 

@@ -26,12 +26,13 @@
   <tbody>
 
 @foreach($transports as $key=>$transport)
+
     
       <tr>
       <th scope="row">{{$key+1}}</th>
      
       <td>
-            <img src="{{url('/uploads/'.$transport->image)}}" width="100px" alt="transport image">
+            <img src="{{'http://localhost/transport-schedule//storage/app/uploads/'.$transport->image}}" style="height: 60px;" width="80" alt="transport image">
       </td>
 
       <td>{{$transport->driver->name}}</td>
@@ -39,7 +40,7 @@
       <td>{{$transport->transport_number}}</td>
       
       <td>
-     
+      
          <a href="{{route('transport.edit', $transport->id)}}" class="btn btn-warning">Edit</a>
          <a onclick="return confirm('Are you sure you want to delete this item?');" href="{{route('transport.delete', $transport->id)}}" class="btn btn-danger">Delete</a>
       

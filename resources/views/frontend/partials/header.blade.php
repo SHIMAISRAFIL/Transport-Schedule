@@ -13,17 +13,21 @@
 									<li><a href="{{route('contact')}}">Contacts</a></li>
 									<li><a href="{{route('term')}}">Terms & Privacy</a></li>
 									
-									@if(auth()->user())
+						@if(auth()->user())
                         <li><a class="nav-item nav-link" href="{{route('officeemployee.logout')}}">Logout</a></li>
                         <li><a class="nav-item nav-link" href="">{{auth()->user()->name}}</a></li>
                         @else
-						<li> <a class="nav-item nav-link" href="{{route('officeemployee.login')}}">Login</a></li>
-						<li><a class="nav-item nav-link" href="{{route('user.signup')}}">Signup</a></li>
+						<li> <a class="nav-item nav-link" href="{{route('officeemployee.login')}}">Office Employee 
+							<p>Login</p></a></li>
+							<li> <a class="nav-item nav-link" href="{{route('driver.login')}}">Driver
+							<p>Login</p> </a></li>
+				
+				
 
-                            @endif
+                     @endif
 
-							<li><a href="{{route('front.search')}}">Search</a></li>
-									
+						
+					
                                   
 
 								</ul>

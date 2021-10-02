@@ -5,15 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-
-class Transport extends Model
+class TripRequest extends Model
 {
     use HasFactory;
-   
-    protected $guarded=[];
-    public function driver()
+     protected $guarded=[];
+
+     public function driver()
     {
 
     return $this->belongsto(Driver::class);
     }
+    public function transport()
+    {
+
+    return $this->belongsto(Transport::class);
+    }
+
 }

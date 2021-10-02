@@ -25,22 +25,12 @@ class TransportController extends Controller
          return view('backend.layouts.transport.create', compact('drivers'));
     }
 
-    public function delete($id)
-    {
 
-      $transports=Transport::find($id);
-        if($transports)
-        {
-            $transports->delete();
-            return redirect()->back()->with('message','Transport Deleted successfully.');
-        }
-        return redirect()->back()->with('message','No Transport found to delete.');
-    }
-
-    
     public function store(Request $request)
     {
         //  dd($request->all());
+
+//Image
         $fileName='';
       if ($request->hasFile('transport_image')) 
       {
@@ -61,6 +51,19 @@ class TransportController extends Controller
                  
      }
 
+
+    public function delete($id)
+    {
+
+      $transports=Transport::find($id);
+        if($transports)
+        {
+            $transports->delete();
+            return redirect()->back()->with('message','Transport Deleted successfully.');
+        }
+        return redirect()->back()->with('message','No Transport found to delete.');
+    }
+
      public function edit($id)
     {
       $transports= Transport::find($id);
@@ -69,8 +72,9 @@ class TransportController extends Controller
     }
 
     public function update(Request $request,$id)
+    
     {
-//        dd($request->all());
+//       dd($request->all());
         $transports= Transport::find($id);
         $transports->update([
             'driver_id'=>$request->driver_id,

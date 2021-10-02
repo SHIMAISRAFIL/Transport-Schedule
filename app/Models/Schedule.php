@@ -21,9 +21,16 @@ class Schedule extends Model
 
     return $this->belongsto(Location::class,'locationto','id');
     }
+
+    
     public function transport()
     {
 
     return $this->belongsto(Transport::class);
     }
+    // public function driver()
+    // {
+
+    // return $this->belongsto(Driver::class);
+    // }
 }
